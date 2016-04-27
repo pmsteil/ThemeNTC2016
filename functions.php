@@ -1,18 +1,128 @@
 <?php 
+require_once('lib/nav.php');
+if( ! function_exists( 'reverie_theme_support' ) ) {
+    function reverie_theme_support() {
+        // Add language supports.
+        load_theme_textdomain('reverie', get_template_directory() . '/lang');
 
-register_nav_menus( array('topmenu' => 'Top Menu1'));
+        // Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
+        add_theme_support('post-thumbnails');
+        // set_post_thumbnail_size(150, 150, false);
+        add_image_size('fd-lrg', 1024, 99999);
+        add_image_size('fd-med', 768, 99999);
+        add_image_size('fd-sm', 320, 9999);
+
+        // rss thingy
+        add_theme_support('automatic-feed-links');
+
+        // Add post formats support. http://codex.wordpress.org/Post_Formats
+        add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
+      
+        
+        // Add menu support. http://codex.wordpress.org/Function_Reference/register_nav_menus
+        add_theme_support('menus');
+        /*register_nav_menus(array(
+            'primary' => __('Primary Navigation', 'reverie'),
+            'additional' => __('Additional Navigation', 'reverie'),
+            'utility' => __('Utility Navigation', 'reverie')
+        ));*/
+register_nav_menus( array('topmenu' => 'Top Menu1'));	
+register_nav_menus( array('footer1' => 'bottom footer1'));
+register_nav_menus( array('footer2' => 'bottom footer2'));
+register_nav_menus( array('footer3' => 'bottom footer3'));
+register_nav_menus( array('footer4' => 'bottom footer4'));
+
+        // Add custom background support
+        add_theme_support( 'custom-background',
+            array(
+                'default-image' => '',  // background image default
+                'default-color' => '', // background color default (dont add the #)
+                'wp-head-callback' => '_custom_background_cb',
+                'admin-head-callback' => '',
+                'admin-preview-callback' => ''
+            )
+        );
+    }
+}
+add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
 
 function wtg_theme_add_sidebars(){
 
 	register_sidebar(array(
-  'name' => __( 'Main', 'LaityTheme1' ),
+  'name' => __( 'Main', 'Laity' ),
   'id' => 'sidebarmain',
-  'description' => __( 'Main sidebar that appears onthe default page template', 'LaityTheme1' ),
+  'description' => __( 'Main sidebar that appears onthe default page template', 'Laity' ),
   'before_widget' => '<div id="%1s" class="widget %2s">',
   'after_widget'  => '</div>',
   'before_title' => '<h2>',
   'after_title' => '</h2>')
 );
+
+register_sidebar(array(
+  'name' => __( 'footer 1', 'Laity' ),
+  'id' => 'footer1',
+  'description' => __( 'Footer first widgets that appears onthe footer section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
+register_sidebar(array(
+  'name' => __( 'footer 2', 'Laity' ),
+  'id' => 'footer2',
+  'description' => __( 'Footer 2nd widgets that appears onthe footer section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
+register_sidebar(array(
+  'name' => __( 'footer 3', 'Laity' ),
+  'id' => 'footer3',
+  'description' => __( 'Footer 3nd widgets that appears onthe footer section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
+register_sidebar(array(
+  'name' => __( 'footer 4', 'Laity' ),
+  'id' => 'footer4',
+  'description' => __( 'Footer 4th widgets that appears onthe footer section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
+register_sidebar(array(
+  'name' => __( 'Bottom footer 1', 'Laity' ),
+  'id' => 'bottom_footer1',
+  'description' => __( 'Bottom Footer 1 widgets that appears onthe Bottom footer section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
+register_sidebar(array(
+  'name' => __( 'Bottom footer 2', 'Laity' ),
+  'id' => 'bottom_footer2',
+  'description' => __( 'Bottom Footer 2 widgets that appears onthe Bottom footer section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
+register_sidebar(array(
+  'name' => __( 'Bottom footer 2', 'Laity' ),
+  'id' => 'bottom_footer3',
+  'description' => __( 'Bottom Footer 3 widgets that appears onthe Bottom footer section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
+
+
 
 }
 add_action( 'widgets_init', 'wtg_theme_add_sidebars' );
@@ -39,19 +149,19 @@ add_action( 'wp_enqueue_scripts', 'wtg_add_theme_javascript' );
 
 
 function wtg_add_theme_styles(){
-	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri()/css/foundation.css, array(), '1461571428');
+	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri()/css/custom.css, array(), '1461571428');
+	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'style_css', get_stylesheet_directory_uri()/style.css, array(), '1461571428');
+	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
@@ -63,19 +173,19 @@ function wtg_add_theme_styles(){
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri()/css/foundation.css, array(), '1461571428');
+	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri()/css/custom.css, array(), '1461571428');
+	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'style_css', get_stylesheet_directory_uri()/style.css, array(), '1461571428');
+	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
@@ -87,19 +197,19 @@ function wtg_add_theme_styles(){
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri()/css/foundation.css, array(), '1461571428');
+	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri()/css/custom.css, array(), '1461571428');
+	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'style_css', get_stylesheet_directory_uri()/style.css, array(), '1461571428');
+	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css, array()', '1461321202');
 	wp_enqueue_style('style_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
@@ -111,19 +221,19 @@ function wtg_add_theme_styles(){
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri()/css/foundation.css, array(), '1461571428');
+	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri()/css/custom.css, array(), '1461571428');
+	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'style_css', get_stylesheet_directory_uri()/style.css, array(), '1461571428');
+	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
@@ -135,19 +245,19 @@ function wtg_add_theme_styles(){
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri()/css/foundation.css, array(), '1461571428');
+	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri()/css/custom.css, array(), '1461571428');
+	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'style_css', get_stylesheet_directory_uri()/style.css, array(), '1461571428');
+	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
@@ -159,19 +269,19 @@ function wtg_add_theme_styles(){
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri()/css/foundation.css, array(), '1461571428');
+	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri()/css/custom.css, array(), '1461571428');
+	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'style_css', get_stylesheet_directory_uri()/style.css, array(), '1461571428');
+	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
@@ -183,19 +293,19 @@ function wtg_add_theme_styles(){
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri()/css/foundation.css, array(), '1461571428');
+	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri()/css/custom.css, array(), '1461571428');
+	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'style_css', get_stylesheet_directory_uri()/style.css, array(), '1461571428');
+	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
@@ -207,19 +317,19 @@ function wtg_add_theme_styles(){
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri()/css/foundation.css, array(), '1461571428');
+	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri()/css/custom.css, array(), '1461571428');
+	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
 
-	wp_register_style( 'style_css', get_stylesheet_directory_uri()/style.css, array(), '1461571428');
+	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
 
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');

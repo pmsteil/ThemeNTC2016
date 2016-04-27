@@ -1,5 +1,5 @@
 /*
-Theme Name: NorthTexasUMC 2016  
+Theme Name: NorthTexasUMC 2016
 Theme URI:
 Author: ChurchBuzz.org
 Author URI: http://www.churchbuzz.org
@@ -88,21 +88,21 @@ PLEASE DO NOT PROVIDE ANYONE A LINK OR COPY OF THIS DOCUMENT.
 div. gform_confirmation_message{
 }
 / end gravity forms /
-/* WordPress will attach this class to the <body> for any page that uses the “front-page�?
+/* WordPress will attach this class to the <body> for any page that uses the “front-page”
 template */
 .home{
 }
-/ WordPress will attach this class to the <body> for any page that uses the “page�? template /
+/ WordPress will attach this class to the <body> for any page that uses the “page” template /
 .page{
 }
-/* WordPress will attach this class to <body> for any blog post that uses the “single�? template
+/* WordPress will attach this class to <body> for any blog post that uses the “single” template
 */
 .single{
 }
-/* WordPress will attach this class to <body> for any blog post that uses the “search�? template
+/* WordPress will attach this class to <body> for any blog post that uses the “search” template
 */
 .search-results{
 }
-/ Wordpress uses this class for any “Read More�? <a> link /
+/ Wordpress uses this class for any “Read More” <a> link /
 .read-more{
 }
