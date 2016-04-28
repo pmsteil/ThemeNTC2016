@@ -27,8 +27,10 @@
 						$args=array(
 						  'post_type' => $type,
 						  'post_status' => 'publish',
-						  'posts_per_page' => -1,
-						  'caller_get_posts'=> 1
+						  'posts_per_page' => 20,
+						  'caller_get_posts'=> 1,
+						  'order'=> 'ASC', 
+						  'orderby' => 'id'
 						);
 						$my_query = null;
 						$my_query = new WP_Query($args);
