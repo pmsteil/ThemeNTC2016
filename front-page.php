@@ -5,7 +5,6 @@
 ?>
 <?php get_header(); ?>
 <!--========main content section start==============-->
-
 <main class="main">
   <div class="main-content-section">
     <div class="row">
@@ -23,7 +22,40 @@
                 <div class="box-holder">
                   <div class="news-row"> 
                     <!--Add blog here -->
+                     <?php
+						$type = 'news';
+						$args=array(
+						  'post_type' => $type,
+						  'post_status' => 'publish',
+						  'posts_per_page' => -1,
+						  'caller_get_posts'=> 1
+						);
+						$my_query = null;
+						$my_query = new WP_Query($args);
+						if( $my_query->have_posts() ) {
+						  while ($my_query->have_posts()) : $my_query->the_post(); ?>
+							
+                          <div id="blogbackground">
+                              	<div class="post-body">
+                                	<li class="blog-list-title" id="postnum1432883">
+                                    <span class="blog-list-title-only">
+                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                    </span>
+                                   <div id="postText1432883">
+                                   	<?php the_post_thumbnail(); ?>
+                                    <?php the_content(); ?>
+                                    <a class="blog-read-more" href="<?php the_permalink() ?> rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
+                                   </div>
+                                	</li>
+                                </div>
+                            </div>
+							<?php
+						  endwhile;
+						}
+						wp_reset_query();  // Restore global post data stomped by the_post().
+						?>
                     
+                  <?php /*?>  
                     <div id="blogbackground">
                       <div class="post-body">
                         <li class="blog-list-title" id="postnum1432883"><span class="blog-list-title-only"><a href="#" title="2016 Course of Study School">New Church Development Hosting a “Passing the Baton” Workshop: May 3-4, 2016</a></span>
@@ -132,7 +164,7 @@
                           <script type="text/javascript">displaypost('postText1448190','postnum1448190',225);</script> 
                         </li>
                       </div>
-                    </div>
+                    </div><?php */?>
                   </div>
                   <div style="text-align: right; font-weight: bold;"><a href="../board-of-ministry.html" style="font-weight: bold;"></a><a href="../board-of-ministry.html">More News and Events</a></div>
                 </div>
