@@ -44,7 +44,7 @@
                                     <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                                     </span>
                                    <div id="postText1432883">
-                                   	<?php the_post_thumbnail(); ?>
+                                   	<div class="blog-thumbnail"><?php the_post_thumbnail(); ?></div>
                                     <?php the_excerpt(); ?>
                                     <a class="blog-read-more" href="<?php the_permalink() ?> rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
                                    </div>
