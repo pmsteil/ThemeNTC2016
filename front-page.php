@@ -45,7 +45,7 @@
                                     </span>
                                    <div id="postText1432883">
                                    	<?php the_post_thumbnail(); ?>
-                                    <?php the_content(); ?>
+                                    <?php the_excerpt(); ?>
                                     <a class="blog-read-more" href="<?php the_permalink() ?> rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
                                    </div>
                                 	</li>
