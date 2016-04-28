@@ -6,14 +6,14 @@
 <?php get_header(); ?>
 
 
-
-<main class="main">
-    <div class="main-content-section">
-        <div class="row">
-        <?php if ( have_posts() ) :
+ <?php if ( have_posts() ) :
 	  while ( have_posts() ) : the_post(); 
 ?>
 <?php endwhile; endif; ?>
+<main class="main">
+    <div class="main-content-section">
+        <div class="row">
+       <?php the_content(); ?>
         </div>
     </div>
 </main>
