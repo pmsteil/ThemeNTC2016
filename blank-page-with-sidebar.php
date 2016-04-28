@@ -12,8 +12,8 @@
 
 <main class="main">
     <div class="main-content-section">
-    	 <section id="main" class="secondary"> 
-        <div class="row">
+    <div class="row">
+    	 <section id="main" class="secondary">
         <article class="large-8 medium-7 index_article left-sidebar-ct columns">
      
  <?php the_content(); ?>
@@ -22,8 +22,8 @@
 	 <aside class="large-4 medium-5 columns right-sidebar-ct">
           <?php get_sidebar( 'sidebarmain' ) ?>
         </aside>
-        </div>
         </section>
+        </div>
     </div>
 </main>
 
