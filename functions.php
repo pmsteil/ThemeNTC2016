@@ -1038,4 +1038,67 @@ add_filter( 'wp_mime_type_icon', function( $icon, $mime, $post_id )
         $src = wp_get_attachment_image_src( $post_id );
 
     return is_array( $src ) ? array_shift( $src ) : $icon;
-}, 10, 3 ); 
+}, 10, 3 );
+
+/*
+* Creating a function to create our CPT
+*/
+
+function custom_post_type() {
+
+// Set UI labels for Custom Post Type
+ $labels = array(
+  'name'                => _x( 'News', 'Post Type General Name', 'NorthTexasUMC 2016' ),
+  'singular_name'       => _x( 'News', 'Post Type Singular Name', 'NorthTexasUMC 2016' ),
+  'menu_name'           => __( 'News', 'NorthTexasUMC 2016' ),
+  'parent_item_colon'   => __( 'Parent News', 'NorthTexasUMC 2016' ),
+  'all_items'           => __( 'All News', 'NorthTexasUMC 2016' ),
+  'view_item'           => __( 'View News', 'NorthTexasUMC 2016' ),
+  'add_new_item'        => __( 'Add New News', 'NorthTexasUMC 2016' ),
+  'add_new'             => __( 'Add News', 'NorthTexasUMC 2016' ),
+  'edit_item'           => __( 'Edit News', 'NorthTexasUMC 2016' ),
+  'update_item'         => __( 'Update News', 'NorthTexasUMC 2016' ),
+  'search_items'        => __( 'Search News', 'NorthTexasUMC 2016' ),
+  'not_found'           => __( 'News Not Found', 'NorthTexasUMC 2016' ),
+  'not_found_in_trash'  => __( 'News Not found in Trash', 'NorthTexasUMC 2016' ),
+ );
+ 
+// Set other options for Custom Post Type
+ 
+ $args = array(
+  'label'               => __( 'News', 'NorthTexasUMC 2016' ),
+  'description'         => __( 'news and reviews', 'NorthTexasUMC 2016' ),
+  'labels'              => $labels,
+  // Features this CPT supports in Post Editor
+  'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+  // You can associate this CPT with a taxonomy or custom taxonomy. 
+  'taxonomies'          => array( 'genres' ),
+  /* A hierarchical CPT is like Pages and can have
+  * Parent and child items. A non-hierarchical CPT
+  * is like Posts.
+  */ 
+  'hierarchical'        => false,
+  'public'              => true,
+  'show_ui'             => true,
+  'show_in_menu'        => true,
+  'show_in_nav_menus'   => true,
+  'show_in_admin_bar'   => true,
+  'menu_position'       => 5,
+  'can_export'          => true,
+  'has_archive'         => true,
+  'exclude_from_search' => false,
+  'publicly_queryable'  => true,
+  'capability_type'     => 'page',
+ );
+ 
+ // Registering your Custom Post Type
+ register_post_type( 'news', $args );
+
+}
+
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+
+add_action( 'init', 'custom_post_type', 0 );
