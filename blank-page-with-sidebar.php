@@ -1,0 +1,30 @@
+<?php
+/*
+    Template Name: blank page with sidebar
+*/
+?>
+<?php get_header(); ?>
+
+
+
+<main class="main">
+    <div class="main-content-section">
+    	 <section id="main" class="secondary"> 
+        <div class="row">
+        <article class="large-8 medium-7 index_article left-sidebar-ct columns">
+        <?php if ( have_posts() ) :
+	  while ( have_posts() ) : the_post(); 
+?>
+<?php endwhile; endif; ?>
+	</article>
+
+	 <aside class="large-4 medium-5 columns right-sidebar-ct">
+          <?php get_sidebar( 'sidebarmain' ) ?>
+        </aside>
+        </div>
+        </section>
+    </div>
+</main>
+
+<!--===Footer section starts===-->
+<?php get_footer(); ?>
