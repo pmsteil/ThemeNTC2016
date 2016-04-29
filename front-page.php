@@ -14,6 +14,7 @@
           <div id="maincontent">
             <slickslider category="home"><img class="front-page-slider-margin" src="<?php echo get_template_directory_uri() ?>/images/front-page-slider1.PNG"/></slickslider>
             <slickslider category="home2"><img class="front-page-slider-margin" src="<?php echo get_template_directory_uri() ?>/images/front-page-slider2.PNG"/></slickslider>
+             <?php echo do_shortcode('[wonderplugin_carousel id="1"]'); ?>
             <div id="District-Page">
               <div class="box">
                 <div class="title title_index">
