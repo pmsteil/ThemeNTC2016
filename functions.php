@@ -1131,7 +1131,4 @@ function ThemeNTC2016_searchform( $form ) {
      return $form;
 
  }
-
-  
-
  add_shortcode('NTC_Theme_search', 'ThemeNTC2016_searchform');
