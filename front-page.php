@@ -25,6 +25,7 @@
                      <?php
 						$type = 'news';
 						$args=array(
+						'category'=>219,
 						  'post_type' => $type,
 						  'post_status' => 'publish',
 						  'posts_per_page' => 20,
