@@ -90,7 +90,9 @@
                     wp_reset_postdata();
                     ?>         
                 </ul>
-                
+                <?php if ( is_active_sidebar( 'sidebarbottom' ) ) : ?>
+	<?php dynamic_sidebar( 'sidebarbottom' ); ?>
+	<?php endif; ?>
                 
               </div>
             </div>
