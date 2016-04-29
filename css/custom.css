@@ -1043,6 +1043,7 @@ ul.right_menu_sec-list {
 }
 div#District-Page {
     margin-bottom: 25px;
+	    margin-top: 30px;
 }
 #main .box {
     font-family: inherit;
@@ -1510,8 +1511,13 @@ div#email-subscribers-2 h2 {
     margin-bottom: 0;
 }
 
+@media only screen  and (min-width: 300px){
 .amazingcarousel-image div:last-child a {
     display: none !important;
     padding: 0px !important;
-} 
-
+    font-size: 0px !important;
+    width: 0px !important;
+    height: 0px !important;
+	color:#fff !important;
+}
+}
