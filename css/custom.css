@@ -1510,3 +1510,8 @@ div#email-subscribers-2 h2 {
     margin-bottom: 0;
 }
 
+.amazingcarousel-image div:last-child a {
+    display: none !important;
+    padding: 0px !important;
+}
+
