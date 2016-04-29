@@ -1061,6 +1061,7 @@ function custom_post_type() {
   'search_items'        => __( 'Search News', 'NorthTexasUMC 2016' ),
   'not_found'           => __( 'News Not Found', 'NorthTexasUMC 2016' ),
   'not_found_in_trash'  => __( 'News Not found in Trash', 'NorthTexasUMC 2016' ),
+  
  );
  
 // Set other options for Custom Post Type
@@ -1089,7 +1090,7 @@ function custom_post_type() {
   'exclude_from_search' => false,
   'publicly_queryable'  => true,
   'capability_type'     => 'page',
-   'taxonomies' => array('topics', 'category',),
+  'taxonomies' => array('topics', 'category',),
  );
  
  // Registering your Custom Post Type
@@ -1102,4 +1103,4 @@ function custom_post_type() {
 * unnecessarily executed. 
 */
 
-add_action( 'init', 'custom_post_type', 0 );  
+add_action( 'init', 'custom_post_type', 0 );
