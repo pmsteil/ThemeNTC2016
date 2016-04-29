@@ -23,20 +23,10 @@
                   <div class="news-row"> 
                     <!--Add blog here -->
                      <?php
-						$type = 'news';
-						$args=array(
-						'category'=>219,
-						  'post_type' => $type,
-						  'post_status' => 'publish',
-						  'posts_per_page' => 20,
-						  'caller_get_posts'=> 1,
-						  'order'=> 'ASC', 
-						  'orderby' => 'id'
-						);
-						$my_query = null;
-						$my_query = new WP_Query($args);
-						if( $my_query->have_posts() ) {
-						  while ($my_query->have_posts()) : $my_query->the_post(); ?>
+						 $args = array( 'category'=>219,'post_type' => 'news','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
+                    $postslist = get_posts( $args );
+                    foreach ( $postslist as $post ) :
+                    setup_postdata( $post ); ?> 
 							
                           <div id="blogbackground">
                               	<div class="post-body">
@@ -53,10 +43,9 @@
                                 </div>
                             </div>
 							<?php
-						  endwhile;
-						}
-						wp_reset_query();  // Restore global post data stomped by the_post().
-						?>
+                    endforeach; 
+                    wp_reset_postdata();
+                    ?>    
                     
                  
                   </div>
