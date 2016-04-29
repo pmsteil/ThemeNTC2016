@@ -1090,7 +1090,7 @@ function custom_post_type() {
   'exclude_from_search' => false,
   'publicly_queryable'  => true,
   'capability_type'     => 'page',
-  'taxonomies' => array('topics', 'category',),
+  'taxonomies'            => array( 'category', 'post_tag' ),
  );
  
  // Registering your Custom Post Type
