@@ -16,4 +16,4 @@ get_header();
   ?>
 <?php get_sidebar('sidebarmain'); ?>
 
-<?php get_footer();?>
+<?php get_footer();?> 
