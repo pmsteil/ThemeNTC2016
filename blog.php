@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Blog page
+    Template Name: Blog custom page
 */
 ?>
 <?php get_header(); ?>
