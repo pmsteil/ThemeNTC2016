@@ -15,7 +15,7 @@
             <div id="District-Page">
               <div class="box">
                 <div class="title title_index">
-                  <h2>News Around the North Texas Conference</h2>
+                  <h2>News Blog Around the North Texas Conference</h2>
                 </div>
                 <div class="box-holder">
                   <div class="news-row"> 
