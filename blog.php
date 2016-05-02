@@ -10,7 +10,7 @@ get_header();
    the_content();
   ?>
   
-<?php
+<?php 
    // End of the loop.
   endwhile;
   ?>
