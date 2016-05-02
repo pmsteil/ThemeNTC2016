@@ -19,7 +19,7 @@
                 </div>
                 <div class="box-holder">
                   <div class="news-row"> 
-                    <!--Add blog here -->
+                    <!--Add blog here --> 
                      <?php
 						 $args = array( 'posts_per_page' => 2000, 'order'=> 'ASC', 'orderby' => 'id' );
                     $postslist = get_posts( $args );
