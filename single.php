@@ -35,8 +35,9 @@ get_header(); ?>
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
+                        $content = get_the_content('Read more');
+                        echo $content;      
                         
-                        the_content( 'Continue reading ' . get_the_title() );
 			endif;
 
 			// Previous/next post navigation.
