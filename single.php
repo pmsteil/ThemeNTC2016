@@ -13,8 +13,12 @@
 <?php
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<main class="main">
+  <div class="main-content-section">
+    <div class="row">
+      <section id="main" class="secondary">
+        <!-- left column -->
+        <article class="large-8 medium-7 left-sidebar-ct columns">
 
 		<?php
 		// Start the loop.
@@ -46,8 +50,14 @@ get_header(); ?>
 		endwhile;
 		?>
 
-		</main><!-- .site-main -->
-                <?php get_sidebar( 'sidebarmain' ) ?>
-	</div><!-- .content-area -->
+		</article>
+        <!-- right column -->
+        <aside class="large-4 medium-5 columns right-sidebar-ct">
+        <?php get_sidebar( 'sidebarmain' ) ?>
+        </aside>
+      </section>
+    </div>
+  </div>
+</main>
 
 <?php get_footer(); ?>
