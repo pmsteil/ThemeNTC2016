@@ -12,6 +12,18 @@
 ?>
 <?php
 get_header(); ?>
+<style>
+    
+    .single_post_title{
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 30px;
+        margin: 0 0 6px;
+        color: #b45f06;
+        
+    } 
+    
+</style>
 
 <main class="main">
   <div class="main-content-section">
@@ -31,6 +43,7 @@ get_header(); ?>
 			 */
                         
 			get_template_part( 'content', get_post_format() );
+                        echo '<p class="single_post_title">'.get_the_title().'</p>';
                         echo "<hr>";
                         the_content();
 			// If comments are open or we have at least one comment, load up the comment template.
