@@ -31,11 +31,11 @@ get_header(); ?>
 			 */
                         
 			get_template_part( 'content', get_post_format() );
-                       
+                        the_content();
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
-                        the_content();
+                        
                         the_content( 'Continue reading ' . get_the_title() );
 			endif;
 
