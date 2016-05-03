@@ -1576,3 +1576,6 @@ div#email-subscribers-2 h2 {
 .comment-author.vcard img {
     width: 25%;
 }
+li#comment-2 {
+    list-style: none;
+}
