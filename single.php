@@ -21,7 +21,12 @@ get_header(); ?>
         margin: 0 0 6px;
         color: #b45f06;
         
-    } 
+    }
+    #comments{
+        color: rgb(76,158,217);
+        font-size: 15px;
+    }
+
     
 </style>
 
