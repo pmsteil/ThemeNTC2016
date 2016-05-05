@@ -23,26 +23,26 @@
                   <div class="news-row"> 
                     <!--Add blog here -->
                      <?php
-						 $args = array( 'category'=>219,'post_type' => 'news','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
+       $args = array( 'category'=>219,'post_type' => 'news','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
                     $postslist = get_posts( $args );
                     foreach ( $postslist as $post ) :
                     setup_postdata( $post ); ?> 
-							
+       
                           <div id="blogbackground">
-                              	<div class="post-body">
-                                	<li class="blog-list-title" id="postnum1432883">
+                               <div class="post-body">
+                                 <li class="blog-list-title" id="postnum1432883">
                                     <span class="blog-list-title-only">
                                     <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                                     </span>
                                    <div id="postText1432883">
-                                   	<div class="blog-thumbnail"><?php the_post_thumbnail(); ?></div>
+                                    <div class="blog-thumbnail"><?php the_post_thumbnail(); ?></div>
                                     <?php the_excerpt(); ?>
                                     <a class="blog-read-more" href="<?php the_permalink() ?> rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
                                    </div>
-                                	</li>
+                                 </li>
                                 </div>
                             </div>
-							<?php
+       <?php
                     endforeach; 
                     wp_reset_postdata();
                     ?>    
@@ -80,9 +80,10 @@
                     wp_reset_postdata();
                     ?>         
                 </ul>
+                <?php get_sidebar( 'sidebarmain' ) ?>
                 <?php if ( is_active_sidebar( 'sidebarbottom' ) ) : ?>
-	<?php dynamic_sidebar( 'sidebarbottom' ); ?>
-	<?php endif; ?>
+ <?php dynamic_sidebar( 'sidebarbottom' ); ?>
+ <?php endif; ?>
                 
               </div>
             </div>
