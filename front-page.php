@@ -68,6 +68,10 @@
             <div id="sidecontent" class="right-sidebar-inner-ct medium-side-top">
               <div class="sidebox">
                 <?php get_sidebar( 'sidebarmain' ) ?>
+                <?php if ( is_active_sidebar( 'sidebarbottom' ) ) : ?>
+ <?php dynamic_sidebar( 'sidebarbottom' ); ?>
+ <?php endif; ?>
+                
               </div>
             </div>
            
