@@ -37,7 +37,7 @@
                                    <div id="postText1432883">
                                     <div class="blog-thumbnail"><?php the_post_thumbnail(); ?></div>
                                     <?php the_excerpt(); ?>
-                                    <a class="blog-read-more" href="<?php the_permalink() ?> rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
+                                    <a class="blog-read-more" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
                                    </div>
                                  </li>
                                 </div>
@@ -68,18 +68,6 @@
             <div id="sidecontent" class="right-sidebar-inner-ct medium-side-top">
               <div class="sidebox"><img class="front-page-slider-margin mrg" src="<?php echo get_template_directory_uri() ?>/images/2015-christmas-tornadoes-news.jpg"/><img class="front-page-slider-margin mrg" src="<?php echo get_template_directory_uri() ?>/images/2015-ac-journal-banner.png"/>
                 <div class="section-top"><a href="#">North Texas Conference UMC</a></div>
-                  <ul class="ourlist ql-normal">
-                    <?php
-                    $args = array( 'category'=>217,'post_type' => 'news','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
-                    $postslist = get_posts( $args );
-                    foreach ( $postslist as $post ) :
-                    setup_postdata( $post ); ?> 
-                    <li><div style="float: left; padding-top: 5px;"><?php the_post_thumbnail(); ?></div><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </li>
-                    <?php
-                    endforeach; 
-                    wp_reset_postdata();
-                    ?>         
-                </ul>
                 <?php get_sidebar( 'sidebarmain' ) ?>
                 <?php if ( is_active_sidebar( 'sidebarbottom' ) ) : ?>
  <?php dynamic_sidebar( 'sidebarbottom' ); ?>
