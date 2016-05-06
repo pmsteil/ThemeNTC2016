@@ -17,6 +17,29 @@
 }
 .stripe_footer_wrapper {
     background: #003366;
+	    padding-top: 12px;
+    padding-bottom: 6px;
+}
+.footer-l-img {
+    float: left;
+    margin-right: 20px;
+}
+.bishopaddress.stripe-footer-lrft-ct p {
+    color: #e2ccab;
+}
+.bishopaddress.stripe-footer-lrft-ct p span strong {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.footer-l-img img {
+    border: 1px solid #e2ccab;
+}
+.fb {
+    text-align: right;
+	 margin-bottom: 8px;
+}
+.twit {
+    text-align: right;
 }
 </style>
 
