@@ -132,6 +132,34 @@ register_sidebar(array(
   'after_title' => '</strong>')
 );
 
+register_sidebar(array(
+  'name' => __( 'header stripe', 'Laity' ),
+  'id' => 'header-stripe',
+  'description' => __( 'header stripe appears on the header section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
+
+register_sidebar(array(
+  'name' => __( 'footer stripe left', 'Laity' ),
+  'id' => 'footer-stripe-left',
+  'description' => __( 'footer stripe appears on the footer left section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
+register_sidebar(array(
+  'name' => __( 'footer stripe right', 'Laity' ),
+  'id' => 'footer-stripe-right',
+  'description' => __( 'footer stripe appears on the footer right section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
 
 
 }
