@@ -68,7 +68,7 @@
             <div id="sidecontent" class="right-sidebar-inner-ct medium-side-top">
               <div class="sidebox"><img class="front-page-slider-margin mrg" src="<?php echo get_template_directory_uri() ?>/images/2015-christmas-tornadoes-news.jpg"/><img class="front-page-slider-margin mrg" src="<?php echo get_template_directory_uri() ?>/images/2015-ac-journal-banner.png"/>
                 <div class="section-top"><a href="#">North Texas Conference UMC</a></div>
-                <?php do_shortcode("['front-sidebar']"); ?>
+                <?php echo do_shortcode("['front-sidebar']"); ?>
                 <?php get_sidebar( 'sidebarmain' ) ?>
                 <?php if ( is_active_sidebar( 'sidebarbottom' ) ) : ?>
  <?php dynamic_sidebar( 'sidebarbottom' ); ?>
