@@ -1132,18 +1132,18 @@ function ThemeNTC2016_searchform( $form ) {
 
  }
  add_shortcode('NTC_Theme_search', 'ThemeNTC2016_searchform');
- function front_page_news_sidebar(){
-	 echo '<ul class="ourlist ql-normal">';
-                  
+ function front_page_news_sidebar(){ ?>
+	 <ul class="ourlist ql-normal">
+                    <?php
                     $args = array( 'category'=>217,'post_type' => 'news','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
                     $postslist = get_posts( $args );
                     foreach ( $postslist as $post ) :
-                    setup_postdata( $post ); 
-                  echo  '<li><div style="float: left; padding-top: 5px;">'.the_post_thumbnail().'</div><a href=" '.the_permalink().'" rel="bookmark" title="Permanent Link to  '.the_title_attribute().'">'.the_title().'</a> </li>';
-                  
+                    setup_postdata( $post ); ?> 
+                    <li><div style="float: left; padding-top: 5px;"><?php the_post_thumbnail(); ?></div><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </li>
+                    <?php
                     endforeach; 
                     wp_reset_postdata();
-                         
-               echo '</ul>';
- }
+                    ?>         
+                </ul>
+ <?php }
  add_shortcode('front-sidebar','front_page_news_sidebar');
