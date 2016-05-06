@@ -3,7 +3,7 @@
     Template Name: Bishop Landing
 */
 ?>
-<?php get_header('header-stripe'); ?>
+<?php get_header('stripe'); ?>
 
 
  <?php if ( have_posts() ) :
@@ -21,4 +21,4 @@
 </main>
 
 <!--===Footer section starts===-->
-<?php get_footer('footer-stripe'); ?>
+<?php get_footer('stripe'); ?>
