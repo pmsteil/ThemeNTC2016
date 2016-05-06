@@ -41,7 +41,7 @@
 .twit {
     text-align: right;
 }
-</style>
+</style> 
 
  <?php if ( have_posts() ) :
 	  while ( have_posts() ) : the_post(); 
