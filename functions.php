@@ -1135,9 +1135,9 @@ function ThemeNTC2016_searchform( $form ) {
  function front_page_news_sidebar(){ ?>
 	 <ul class="ourlist ql-normal">
                     <?php
-                    $args = array( 'category'=>217,'post_type' => 'news','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
-                     $loop = new WP_Query( $args );
-  while ( $loop->have_posts() ) : $loop->the_post();?>
+                    $args1 = array( 'category'=>217,'post_type' => 'news','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
+                     $loop1 = new WP_Query( $args1 );
+  while ( $loop1->have_posts() ) : $loop1->the_post();?>
                     <li><div style="float: left; padding-top: 5px;"><?php the_post_thumbnail(); ?></div><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </li>
                     <?php
                     endwhile; 
