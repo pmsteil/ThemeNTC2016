@@ -74,9 +74,6 @@
  <?php the_content(); ?>
 	</article>
 
-	 <aside class="large-4 medium-5 columns right-sidebar-ct">
-          <?php get_sidebar( 'sidebarmain' ) ?>
-        </aside>
         </section>
         </div>
     </div>
