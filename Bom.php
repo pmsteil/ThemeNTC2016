@@ -74,20 +74,6 @@
         </div>
     </div>
 </main>
-<div class="stripe_footer_wrapper">
-	<div class="row">
-    	<div class="large-6 medium-6 small-12 columns left-strip-footer">
-    	<?php if ( is_active_sidebar( 'footer-stripe-left' ) ) : ?>
-				<?php dynamic_sidebar( 'footer-stripe-left' ); ?>
-          <?php endif; ?>
-          </div>
-          <div class="large-6 medium-6 small-12 columns right-strip-footer">
-    	<?php if ( is_active_sidebar( 'footer-stripe-right' ) ) : ?>
-				<?php dynamic_sidebar( 'footer-stripe-right' ); ?>
-          <?php endif; ?>
-          </div>
-    </div>
-</div>
 
 <!--===Footer section starts===-->
-<?php get_footer(); ?>
+<?php get_footer('stripe'); ?>
