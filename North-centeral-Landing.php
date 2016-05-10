@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Metro Landing 
+    Template Name: North Centeral Landing 
 */
 ?>
 <?php get_header('stripe'); 
@@ -14,12 +14,12 @@
     text-align: center;
 }
 .stripe_heder_wrapper {
-    background: #007077;
+    background: #951c0c;
     padding-top: 31px;
     padding-bottom: 31px;
 }
 .stripe_footer_wrapper {
-    background: #007077;
+    background: #951c0c;
 	    padding-top: 12px;
     padding-bottom: 6px;
 }
@@ -46,7 +46,7 @@
 }
 .dropdown_ct_list li:last-child a.drop-p-bg {
     width: 170px;
-    background: url(http://dev.northtexasumc.org/wp-content/uploads/2016/05/btn-for-districts-blueer.png) no-repeat !important;
+    background: url(http://dev.northtexasumc.org/wp-content/uploads/2016/05/btn-for-districts-red.png) no-repeat !important;
 }
 .footer_right {
     margin-left: 300px;

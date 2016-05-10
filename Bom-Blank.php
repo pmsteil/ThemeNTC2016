@@ -3,7 +3,7 @@
     Template Name: Bom Blank 
 */
 ?>
-<?php get_header('bishopheader'); 
+<?php get_header('stripe'); 
 
 ?>
 
@@ -46,7 +46,7 @@
 }
 .dropdown_ct_list li:last-child a.drop-p-bg {
     width: 170px;
-    background: url(http://localhost/Laity/wp-content/uploads/2016/05/btn-for-districts-light-blue.png) no-repeat !important;
+    background: url(http://dev.northtexasumc.org/wp-content/uploads/2016/05/btn-for-districts-light-blue.png) no-repeat !important;
 }
 .footer_right {
     margin-left: 300px;
@@ -97,4 +97,4 @@
 </div>
 
 <!--===Footer section starts===-->
-<?php get_footer(); ?>
+<?php get_footer('stripe'); ?>
