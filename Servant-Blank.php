@@ -55,7 +55,7 @@
     float: right;
     
     margin-right: 100px !important;
-}
+} 
 .district-img_left {
     float: left;
 }
