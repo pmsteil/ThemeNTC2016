@@ -90,4 +90,4 @@
 </div>
 
 <!--===Footer section starts===-->
-<?php get_footer('stripe'); ?>
+<?php get_footer(); ?>
