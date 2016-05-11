@@ -54,7 +54,7 @@
 <main class="main">
     <div class="main-content-section">
         <div class="row">
-        <section id="main" class="secondary1">
+        <section id="main" class="secondary">
        <?php the_content(); ?>
        </section>
         </div>
