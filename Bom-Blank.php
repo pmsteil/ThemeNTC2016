@@ -83,6 +83,6 @@
        </section>
         </div>
     </div>
-</main>
+</main> 
 <!--===Footer section starts===-->
 <?php get_footer('stripe'); ?>
