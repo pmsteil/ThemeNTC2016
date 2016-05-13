@@ -224,7 +224,11 @@ health insurance, property &amp; liability insurance and other services for the 
             <ul class="dropdown m-menu">
               <!----DropDown 2nd---->
               <li> 
-                  <?php get_post_page_content ('24510');?>
+                  <?php //get_post_page_content ('24510');
+                        $page_arr = get_post(24510);
+                        //$page_content = $page_arr['']
+                        echo '<pre>';print_r($page_arr);echo '</pre>';
+                  ?>
                   
                 <!----------2nd poup----------------->
              <!-- <div class="row">
