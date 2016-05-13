@@ -301,9 +301,9 @@ health insurance, property &amp; liability insurance and other services for the 
 <!--========bottom heder end==============--> 
 <div class="stripe_heder_wrapper">
 	<div class="row">
-    <h1><?php echo the_title(); ?></h1>
-    	<?php /*?><?php if ( is_active_sidebar( 'header-stripe' ) ) : ?>
+    
+    	<?php if ( is_active_sidebar( 'header-stripe' ) ) : ?>
 				<?php dynamic_sidebar( 'header-stripe' ); ?>
-          <?php endif; ?><?php */?>
+          <?php endif; ?>
     </div>
 </div>

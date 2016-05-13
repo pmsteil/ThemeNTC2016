@@ -55,6 +55,7 @@
     <div class="main-content-section">
         <div class="row">
         <section id="main" class="secondary">
+            <h1><?php echo the_title(); ?></h1>
        <?php the_content(); ?>
        </section>
         </div>
