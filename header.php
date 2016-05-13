@@ -228,7 +228,7 @@ health insurance, property &amp; liability insurance and other services for the 
                         $page_arr = get_post(24510);
                         //$page_content = $page_arr['']
                         echo"<pre>";
-                      print_r($page_arr['post_content']);
+                      print_r($page_arr);echo '</pre>';
                   ?>
                   
                 <!----------2nd poup----------------->
