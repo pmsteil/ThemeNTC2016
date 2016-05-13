@@ -3,6 +3,7 @@
     Template Name: For District menu
 */
 ?>
+
 <style>
 .districts-popup {
     border: 1px solid #42290e;
@@ -75,8 +76,6 @@ ul.Superintendent-lists {
     border: 1px solid #00949B;
 } 
 </style>
-
-
    <?php if ( have_posts() ) :
 	  while ( have_posts() ) : the_post(); 
 ?>
