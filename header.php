@@ -232,7 +232,7 @@ health insurance, property &amp; liability insurance and other services for the 
                         <h2 class="Districts-main-title">Making Disciples to Transform North Texas and The World!</h2>
                         <div class="col first large-3 medium-6 columns">
                           <div class="district-title"><strong>East District</strong></div>
-                          <div class="district-img"><img src="<?php echo get_template_directory_uri() ?>/images/Vic-Casad-110-130.jpg" alt="Victor Casad" style="border: 0pt none currentcolor;"></div>
+                          <div class="district-img"><img src="<?php //echo get_template_directory_uri() ?>/images/Vic-Casad-110-130.jpg" alt="Victor Casad" style="border: 0pt none currentcolor;"></div>
                           <div class="district-super"><strong>Victor Casad</strong></div>
                           <div class="district-charge"><strong>District Superintendent</strong></div>
                           <ul class="Superintendent-lists">
@@ -245,7 +245,7 @@ health insurance, property &amp; liability insurance and other services for the 
                           <a class="east-btn district-btn show-for-large-cust" href="/"><span>Contact us</span></a> </div>
                         <div class="col second large-3 medium-6 columns">
                           <div class="district-title"><strong>Metro District</strong></div>
-                          <div class="district-img"><img src="<?php echo get_template_directory_uri() ?>/images/CammyGaston-110x130.jpg" alt="Camille Gaston" style="border: 0pt none currentcolor;"></div>
+                          <div class="district-img"><img src="<?php //echo get_template_directory_uri() ?>/images/CammyGaston-110x130.jpg" alt="Camille Gaston" style="border: 0pt none currentcolor;"></div>
                           <div class="district-super"><strong>Camille Gaston</strong></div>
                           <div class="district-charge"><strong>District Superintendent</strong></div>
                           <ul class="Superintendent-lists">
@@ -258,7 +258,7 @@ health insurance, property &amp; liability insurance and other services for the 
                           <a class="metro-btn district-btn show-for-large-cust" href="/Metro-District/contact-us.html"><span>Contact us</span></a> </div>
                         <div class="col third large-3 medium-6 columns">
                           <div class="district-title"><strong>North Central District</strong></div>
-                          <div class="district-img"><img src="<?php echo get_template_directory_uri() ?>/images/RonHenderson-110x130.gif" alt="Dr. Ronald Henderson" style="border: 0pt none currentcolor; width: 110px; height: 130px;"></div>
+                          <div class="district-img"><img src="<?php //echo get_template_directory_uri() ?>/images/RonHenderson-110x130.gif" alt="Dr. Ronald Henderson" style="border: 0pt none currentcolor; width: 110px; height: 130px;"></div>
                           <div class="district-super"><strong>Dr. Ronald Henderson</strong></div>
                           <div class="district-charge"><strong>District Superintendent</strong></div>
                           <ul class="northcentral-links Superintendent-lists">
@@ -271,7 +271,7 @@ health insurance, property &amp; liability insurance and other services for the 
                           <a class="northcentral-btn district-btn show-for-large-cust" href="/"><span>Contact us</span></a> </div>
                         <div class="col fourth large-3 medium-6 columns">
                           <div class="district-title"><strong>Northwest District</strong></div>
-                          <div class="district-img"><img src="<?php echo get_template_directory_uri() ?>/images/Marvin-Guier-2013-110x130.jpg" alt="L. Marvin Guier III" style="border: 0pt none currentcolor;"></div>
+                          <div class="district-img"><img src="<?php //echo get_template_directory_uri() ?>/images/Marvin-Guier-2013-110x130.jpg" alt="L. Marvin Guier III" style="border: 0pt none currentcolor;"></div>
                           <div class="district-super"><strong>L. Marvin Guier III</strong></div>
                           <div class="district-charge"><strong>District Superintendent</strong></div>
                           <ul class="Superintendent-lists">
