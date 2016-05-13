@@ -73,7 +73,7 @@ ul.Superintendent-lists {
     text-align: center;
     padding: 0 10% !important;
     border: 1px solid #00949B;
-}
+} 
 </style>
 
 
