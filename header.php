@@ -225,7 +225,7 @@ health insurance, property &amp; liability insurance and other services for the 
               <!----DropDown 2nd---->
               <li> 
                 <!----------2nd poup----------------->
-                <div class="row">
+             <!-- <div class="row">
                   <div class="districts-popup">
                     <div class="head large-12">
                       <div class="churches-options">
@@ -287,6 +287,8 @@ health insurance, property &amp; liability insurance and other services for the 
                     </div>
                   </div>
                 </div>
+                -->
+                
               </li>
             </ul>
           </li>
@@ -296,6 +298,7 @@ health insurance, property &amp; liability insurance and other services for the 
   </nav>
 </div>
 <!--end .contain-to-grid-->
+
 </div>
 <!--/NAVBAR MAIN--> 
 <!--========bottom heder end==============--> 
