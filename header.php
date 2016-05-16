@@ -222,7 +222,7 @@ health insurance, property &amp; liability insurance and other services for the 
           </li>
           <?php $post_id = get_the_ID();
  
-       echo $slug = basename(get_page_template_slug( $post_id ));
+       $slug = basename(get_page_template_slug( $post_id ));
        
        switch($slug){
            case "Metro.php":?>
