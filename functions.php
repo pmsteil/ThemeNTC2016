@@ -160,6 +160,15 @@ register_sidebar(array(
   'before_title' => '<strong>',
   'after_title' => '</strong>')
 );
+register_sidebar(array(
+  'name' => __( 'Metro District', 'Laity' ),
+  'id' => 'metro_district',
+  'description' => __( 'Metro District appears on the header section', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<strong>',
+  'after_title' => '</strong>')
+);
 
 
 }

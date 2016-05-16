@@ -15,7 +15,7 @@
     <div class="row">
     	 <section id="main" class="secondary">
         <article class="large-8 medium-7 index_article left-sidebar-ct columns">
-        <h1><?php echo the_title(); ?></h1>
+        <h1> <?php echo the_title(); ?> </h1>
         <?php the_content(); ?>  
 	</article>
 

@@ -220,6 +220,45 @@ health insurance, property &amp; liability insurance and other services for the 
               </li>
             </ul>
           </li>
+          <?php $post_id = get_the_ID();
+ 
+       echo $slug = basename(get_page_template_slug( $post_id ));
+       
+       switch($slug){
+           case "Metro.php":?>
+          <li class="has-dropdown"><a class="drop-p-bg" href="#">Metro Districts</a>
+            <ul class="dropdown m-menu">          
+              <?php if ( is_active_sidebar( 'metro_district' ) ) : 
+	
+	      dynamic_sidebar( 'metro_district' );
+	
+              endif;?>
+            </ul>
+          </li>
+        <?php  break; 
+          case "Bishop.php":?>
+          <li class="has-dropdown"><a class="drop-p-bg" href="#">Bishop Districts</a>
+            <ul class="dropdown m-menu">          
+              <?php if ( is_active_sidebar( 'bishop_district' ) ) : 
+	
+	      dynamic_sidebar( 'bishop_district' );
+	
+              endif; ?>
+            </ul>
+          </li>
+        <?php  break; 
+          case "Bom.php":?>
+          <li class="has-dropdown"><a class="drop-p-bg" href="#">Bom Districts</a>
+            <ul class="dropdown m-menu">          
+              <?php if ( is_active_sidebar( 'bom_district' ) ) : 
+	
+	      dynamic_sidebar( 'bom_district' );
+	
+              endif; ?>
+            </ul>
+          </li>
+          
+       <?php break; default: ?>
           <li class="has-dropdown"><a class="drop-p-bg" href="#">For Districts</a>
             <ul class="dropdown m-menu">
               <!----DropDown 2nd---->
@@ -300,6 +339,7 @@ health insurance, property &amp; liability insurance and other services for the 
               </li>
             </ul>
           </li>
+       <?php }?>
         </ul>
       </div>
     </section>
