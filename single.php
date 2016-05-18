@@ -12,8 +12,7 @@
 ?>
 <?php
 get_header(); ?>
-<style>
-    
+<style>   
     .single_post_title{
         font-size: 18px;
         font-weight: 600;
