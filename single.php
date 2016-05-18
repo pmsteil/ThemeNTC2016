@@ -45,8 +45,7 @@ h1.single_post_title.single_post_title12 {
     color: #888;
     font-size: 11px;
     margin: 0 0 18px;
-}
-    
+}    
 </style>
 
 <main class="main">
