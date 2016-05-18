@@ -26,7 +26,26 @@ get_header(); ?>
         color: rgb(76,158,217);
         font-size: 15px;
     }
-
+	.blogtitle.blogtitle12 {
+    color: #b45f06;
+    font-family: 'Open Sans';
+    font-size: 22px;
+    margin: 0 0 2px 0;
+}
+p.description.description12 {
+    color: #000;
+    font: 13px/1.5 'Open Sans', Arial, Helvetica, Verdana, sans-serif;
+}
+h1.single_post_title.single_post_title12 {
+    font-size: 36px;
+    line-height: 40px;
+       margin: 0 0 7px 0 !important;
+}
+.post-details.post-details12 {
+    color: #888;
+    font-size: 11px;
+    margin: 0 0 18px;
+}
     
 </style>
 
