@@ -51,7 +51,7 @@ get_header(); ?>
                         
 			get_template_part( 'content', get_post_format() );
                         echo '<h1 class="single_post_title single_post_title12">'.get_the_title().'</h1>';
-						echo'<div class="post-details post-details12">' .the_time('Date Posted: l, F jS, Y').'</div>';
+						echo'<div class="post-details post-details12">Date Posted:<span>' .the_time(' l, F jS, Y').'</span></div>';
                         echo "<hr>";
                         the_content();
 			// If comments are open or we have at least one comment, load up the comment template.
