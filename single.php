@@ -75,6 +75,7 @@ get_header(); ?>
 		</article>
         <!-- right column -->
         <aside class="large-4 medium-5 columns right-sidebar-ct">
+        hello Patrik
         <?php get_sidebar( 'sidebarmain' ) ?>
         </aside>
       </section>
