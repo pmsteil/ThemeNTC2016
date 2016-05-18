@@ -36,6 +36,8 @@ get_header(); ?>
       <section id="main" class="secondary">
         <!-- left column -->
         <article class="large-8 medium-7 left-sidebar-ct columns">
+        <div class="blogtitle blogtitle12">North Texas Conference News</div>
+        <p class="description description12">A New Vision, A New Voice ~ The North Texas Conference</p>
 
 		<?php
 		// Start the loop.
@@ -48,7 +50,8 @@ get_header(); ?>
 			 */
                         
 			get_template_part( 'content', get_post_format() );
-                        echo '<p class="single_post_title">'.get_the_title().'</p>';
+                        echo '<h1 class="single_post_title single_post_title12">'.get_the_title().'</h1>';
+						echo'<div class="post-details post-details12">' .get_the_date().'</div>';
                         echo "<hr>";
                         the_content();
 			// If comments are open or we have at least one comment, load up the comment template.
@@ -75,8 +78,11 @@ get_header(); ?>
 		</article>
         <!-- right column -->
         <aside class="large-4 medium-5 columns right-sidebar-ct">
-        hello Patrik
-        <?php get_sidebar( 'sidebarmain' ) ?>
+        	<div id="sidecontent" class="right-sidebar-inner-ct medium-side-top">
+            <div class="sidebox">
+       			 <?php get_sidebar( 'sidebarmain' ) ?>
+        	</div>
+        </div>
         </aside>
       </section>
     </div>
