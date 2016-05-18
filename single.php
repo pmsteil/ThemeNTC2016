@@ -94,8 +94,7 @@ h1.single_post_title.single_post_title12 {
 		// End the loop.
 		endwhile;
 		?>
-
-		</article>
+        		</article>
         <!-- right column -->
         <aside class="large-4 medium-5 columns right-sidebar-ct">
         	<div id="sidecontent" class="right-sidebar-inner-ct medium-side-top">
