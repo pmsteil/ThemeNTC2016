@@ -11,6 +11,7 @@ get_header();
              the_content(); 
    
                 endwhile; endif; 
+	get_footer();			
     ?>
 
 
