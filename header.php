@@ -263,6 +263,10 @@ health insurance, property &amp; liability insurance and other services for the 
             <ul class="dropdown m-menu">
               <!----DropDown 2nd---->
               <li> 
+              <div class="row">
+                  <div class="districts-popup">
+                    <div class="head large-12">
+                      <div class="churches-options">
                   <?php //get_post_page_content ('24510');
                         $page_arr = get_post(24510);
                         //$page_content = $page_arr['']
@@ -270,7 +274,10 @@ health insurance, property &amp; liability insurance and other services for the 
                         $district_menu_content = apply_filters('the_content', $page_arr->post_content);
                         echo $district_menu_content;
                   ?>
-                  
+               </div>
+              </div>
+             </div>
+            </div>   
                 <!----------2nd poup----------------->
              <!-- <div class="row">
                   <div class="districts-popup">
