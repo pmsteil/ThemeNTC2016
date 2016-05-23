@@ -2,6 +2,7 @@
 /*
     Template Name: For District menu
 */
+get_header();
 ?>
 
 
