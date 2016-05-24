@@ -111,6 +111,7 @@
               <!----DropDown 1st---->
               <li>
                 <div class="row">
+                <div class="churches-popup">
                  <?php //get_post_page_content ('24510');
                         $page_churches_arr = get_post(26582);
                         //$page_content = $page_arr['']
@@ -224,6 +225,7 @@ health insurance, property &amp; liability insurance and other services for the 
                       </div>
                     </div>
                   </div><?php */?>
+                  </div>
                 </div>
               </li>
             </ul>
