@@ -130,4 +130,4 @@ class reverie_walker extends Walker_Nav_Menu {
     		$output .= $this->nav_bar['in_top_bar'] == true ? "\n$indent<ul class=\"dropdown\">\n" : "\n$indent<ul class=\"level-$depth\">\n";
 		}
   	}
-} 
+}
