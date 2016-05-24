@@ -1,6 +1,6 @@
 <?php
 /*
-	Template Name : For Churches Menu
+	 Template Name: For Churches Menu
 */
  get_header();?>
  
