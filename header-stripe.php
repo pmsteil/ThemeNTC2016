@@ -109,6 +109,7 @@
           <li class="has-dropdown"><a class="drop-p-bg" href="#">For Churches</a>
             <ul class="dropdown m-menu">
               <!----DropDown 1st---->
+
               <li>
                 <div class="row">
                   <div class="churches-popup">
@@ -220,19 +221,73 @@ health insurance, property &amp; liability insurance and other services for the 
               </li>
             </ul>
           </li>
+          <?php $post_id = get_the_ID();
+ 
+       $slug = basename(get_page_template_slug( $post_id ));
+       
+       switch($slug){
+           case "Metro.php":?>
+          <li class="has-dropdown"><a class="drop-p-bg" href="#">Metro Districts</a>
+            <ul class="dropdown m-menu">          
+              <?php if ( is_active_sidebar( 'metro_district' ) ) : 
+	
+	      dynamic_sidebar( 'metro_district' );
+	
+              endif;?>
+            </ul>
+          </li>
+        <?php  break; 
+          case "Bishop.php":?>
+          <li class="has-dropdown"><a class="drop-p-bg" href="#">Bishop Districts</a>
+            <ul class="dropdown m-menu">          
+              <?php if ( is_active_sidebar( 'bishop_district' ) ) : 
+	
+	      dynamic_sidebar( 'bishop_district' );
+	
+              endif; ?>
+            </ul>
+          </li>
+        <?php  break; 
+          case "Bom.php":?>
+          <li class="has-dropdown"><a class="drop-p-bg" href="#">Bom Districts</a>
+            <ul class="dropdown m-menu">          
+              <?php if ( is_active_sidebar( 'bom_district' ) ) : 
+	
+	      dynamic_sidebar( 'bom_district' );
+	
+              endif; ?>
+            </ul>
+          </li>
+          
+       <?php break; default: ?>
           <li class="has-dropdown"><a class="drop-p-bg" href="#">For Districts</a>
             <ul class="dropdown m-menu">
               <!----DropDown 2nd---->
               <li> 
+              <div class="row">
+                  <div class="districts-popup">
+                    <div class="head large-12">
+                      <div class="churches-options">
+                  <?php //get_post_page_content ('24510');
+                        $page_arr = get_post(24510);
+                        //$page_content = $page_arr['']
+                        
+                        $district_menu_content = apply_filters('the_content', $page_arr->post_content);
+                        echo $district_menu_content;
+                  ?>
+               </div>
+              </div>
+             </div>
+            </div>   
                 <!----------2nd poup----------------->
-                <div class="row">
+             <!-- <div class="row">
                   <div class="districts-popup">
                     <div class="head large-12">
                       <div class="churches-options">
                         <h2 class="Districts-main-title">Making Disciples to Transform North Texas and The World!</h2>
                         <div class="col first large-3 medium-6 columns">
                           <div class="district-title"><strong>East District</strong></div>
-                          <div class="district-img"><img src="<?php echo get_template_directory_uri() ?>/images/Vic-Casad-110-130.jpg" alt="Victor Casad" style="border: 0pt none currentcolor;"></div>
+                          <div class="district-img"><img src="<?php //echo get_template_directory_uri() ?>/images/Vic-Casad-110-130.jpg" alt="Victor Casad" style="border: 0pt none currentcolor;"></div>
                           <div class="district-super"><strong>Victor Casad</strong></div>
                           <div class="district-charge"><strong>District Superintendent</strong></div>
                           <ul class="Superintendent-lists">
@@ -242,10 +297,11 @@ health insurance, property &amp; liability insurance and other services for the 
                             <li><a href="/">Clergy Directory</a> </li>
                             <li class="show-for-small"><a href="/">Contact us</a> </li>
                           </ul>
+
                           <a class="east-btn district-btn show-for-large-cust" href="/"><span>Contact us</span></a> </div>
                         <div class="col second large-3 medium-6 columns">
                           <div class="district-title"><strong>Metro District</strong></div>
-                          <div class="district-img"><img src="<?php echo get_template_directory_uri() ?>/images/CammyGaston-110x130.jpg" alt="Camille Gaston" style="border: 0pt none currentcolor;"></div>
+                          <div class="district-img"><img src="<?php //echo get_template_directory_uri() ?>/images/CammyGaston-110x130.jpg" alt="Camille Gaston" style="border: 0pt none currentcolor;"></div>
                           <div class="district-super"><strong>Camille Gaston</strong></div>
                           <div class="district-charge"><strong>District Superintendent</strong></div>
                           <ul class="Superintendent-lists">
@@ -258,7 +314,7 @@ health insurance, property &amp; liability insurance and other services for the 
                           <a class="metro-btn district-btn show-for-large-cust" href="/Metro-District/contact-us.html"><span>Contact us</span></a> </div>
                         <div class="col third large-3 medium-6 columns">
                           <div class="district-title"><strong>North Central District</strong></div>
-                          <div class="district-img"><img src="<?php echo get_template_directory_uri() ?>/images/RonHenderson-110x130.gif" alt="Dr. Ronald Henderson" style="border: 0pt none currentcolor; width: 110px; height: 130px;"></div>
+                          <div class="district-img"><img src="<?php //echo get_template_directory_uri() ?>/images/RonHenderson-110x130.gif" alt="Dr. Ronald Henderson" style="border: 0pt none currentcolor; width: 110px; height: 130px;"></div>
                           <div class="district-super"><strong>Dr. Ronald Henderson</strong></div>
                           <div class="district-charge"><strong>District Superintendent</strong></div>
                           <ul class="northcentral-links Superintendent-lists">
@@ -271,7 +327,7 @@ health insurance, property &amp; liability insurance and other services for the 
                           <a class="northcentral-btn district-btn show-for-large-cust" href="/"><span>Contact us</span></a> </div>
                         <div class="col fourth large-3 medium-6 columns">
                           <div class="district-title"><strong>Northwest District</strong></div>
-                          <div class="district-img"><img src="<?php echo get_template_directory_uri() ?>/images/Marvin-Guier-2013-110x130.jpg" alt="L. Marvin Guier III" style="border: 0pt none currentcolor;"></div>
+                          <div class="district-img"><img src="<?php //echo get_template_directory_uri() ?>/images/Marvin-Guier-2013-110x130.jpg" alt="L. Marvin Guier III" style="border: 0pt none currentcolor;"></div>
                           <div class="district-super"><strong>L. Marvin Guier III</strong></div>
                           <div class="district-charge"><strong>District Superintendent</strong></div>
                           <ul class="Superintendent-lists">
@@ -287,15 +343,19 @@ health insurance, property &amp; liability insurance and other services for the 
                     </div>
                   </div>
                 </div>
+                -->
+                
               </li>
             </ul>
           </li>
+       <?php }?>
         </ul>
       </div>
     </section>
   </nav>
 </div>
 <!--end .contain-to-grid-->
+
 </div>
 <!--/NAVBAR MAIN--> 
 <!--========bottom heder end==============--> 
