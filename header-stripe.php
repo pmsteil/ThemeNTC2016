@@ -112,7 +112,16 @@
 
               <li>
                 <div class="row">
-                  <div class="churches-popup">
+                <div class="churches-popup">
+                 <?php //get_post_page_content ('24510');
+                        $page_churches_arr = get_post(26582);
+                        //$page_content = $page_arr['']
+                        
+                        $churches_menu_content = apply_filters('the_content', $page_churches_arr->post_content);
+                        echo $churches_menu_content;
+                  ?>
+                
+                  <?php /*?><div class="churches-popup">
                     <div class="head large-12">
                       <div class="large-6 medium-6 img-sec columns"> <img style="border: 2px solid #ffa024;" alt="Bishop Mike McKee" src="<?php echo get_template_directory_uri() ?>/images/bishop-mckee-Church-menu.jpg">
                         <div class="hover-head-text-sec">
@@ -216,6 +225,7 @@ health insurance, property &amp; liability insurance and other services for the 
                         <div style="clear:both;"> </div>
                       </div>
                     </div>
+                  </div><?php */?>
                   </div>
                 </div>
               </li>
@@ -297,7 +307,6 @@ health insurance, property &amp; liability insurance and other services for the 
                             <li><a href="/">Clergy Directory</a> </li>
                             <li class="show-for-small"><a href="/">Contact us</a> </li>
                           </ul>
-
                           <a class="east-btn district-btn show-for-large-cust" href="/"><span>Contact us</span></a> </div>
                         <div class="col second large-3 medium-6 columns">
                           <div class="district-title"><strong>Metro District</strong></div>
