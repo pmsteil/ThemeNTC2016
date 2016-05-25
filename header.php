@@ -225,17 +225,16 @@ health insurance, property &amp; liability insurance and other services for the 
               </li>
             </ul>
           </li>
+          <?php if ( is_active_sidebar( 'd-dropdowns' ) ) : ?>
+				<?php dynamic_sidebar( 'd-dropdowns' ); ?>
+          <?php endif; ?>
+           <?php /*?>
           <li class="has-dropdown"><a class="drop-p-bg" href="#">For Districts</a>
             <ul class="dropdown m-menu">
               <!----DropDown 2nd---->
-              <li> 
-            <?php //echo do_shortcode('[For-Districts-Drop-Down-Menu]'); ?>
-            	
-    	<?php if ( is_active_sidebar( 'd-dropdowns' ) ) : ?>
-				<?php dynamic_sidebar( 'd-dropdowns' ); ?>
-          <?php endif; ?>
+              <li>  	
                 <!----------2nd poup----------------->
-                <?php /*?><div class="row">
+               <div class="row">
                   <div class="districts-popup">
                     <div class="head large-12">
                       <div class="churches-options">
@@ -296,10 +295,10 @@ health insurance, property &amp; liability insurance and other services for the 
                       </div>
                     </div>
                   </div>
-                </div><?php */?>
+                </div>
               </li>
             </ul>
-          </li>
+          </li><?php */?>
         </ul>
       </div>
     </section>
