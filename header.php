@@ -111,6 +111,10 @@
               <!----DropDown 1st---->
 
               <li>
+                  	
+    	<?php if ( is_active_sidebar( 'c-dropdowns' ) ) : ?>
+				<?php dynamic_sidebar( 'c-dropdowns' ); ?>
+          <?php endif; ?>
                 <div class="row">
                   <div class="churches-popup">
                     <div class="head large-12">
@@ -227,8 +231,8 @@ health insurance, property &amp; liability insurance and other services for the 
               <li> 
             <?php //echo do_shortcode('[For-Districts-Drop-Down-Menu]'); ?>
             	
-    	<?php if ( is_active_sidebar( 'c-dropdowns' ) ) : ?>
-				<?php dynamic_sidebar( 'c-dropdowns' ); ?>
+    	<?php if ( is_active_sidebar( 'd-dropdowns' ) ) : ?>
+				<?php dynamic_sidebar( 'd-dropdowns' ); ?>
           <?php endif; ?>
                 <!----------2nd poup----------------->
                 <?php /*?><div class="row">
