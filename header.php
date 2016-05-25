@@ -112,7 +112,7 @@
 		 if ( is_active_sidebar( 'd-dropdowns' ) ) : 
 				 dynamic_sidebar( 'd-dropdowns' ); 
           endif; ?>
-           
+           <div style="clear:both"> </div>
         </ul>
       </div>
     </section>
