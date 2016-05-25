@@ -225,7 +225,11 @@ health insurance, property &amp; liability insurance and other services for the 
             <ul class="dropdown m-menu">
               <!----DropDown 2nd---->
               <li> 
-            <?php echo do_shortcode('[For-Districts-Drop-Down-Menu]'); ?>
+            <?php //echo do_shortcode('[For-Districts-Drop-Down-Menu]'); ?>
+            	
+    	<?php if ( is_active_sidebar( 'header-stripe' ) ) : ?>
+				<?php dynamic_sidebar( 'header-stripe' ); ?>
+          <?php endif; ?>
                 <!----------2nd poup----------------->
                 <?php /*?><div class="row">
                   <div class="districts-popup">

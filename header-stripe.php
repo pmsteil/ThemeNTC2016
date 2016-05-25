@@ -370,8 +370,8 @@ health insurance, property &amp; liability insurance and other services for the 
 <div class="stripe_heder_wrapper">
 	<div class="row">
     
-    	<?php if ( is_active_sidebar( 'header-stripe' ) ) : ?>
-				<?php dynamic_sidebar( 'header-stripe' ); ?>
+    	<?php if ( is_active_sidebar( 'd-dropdowns' ) ) : ?>
+				<?php dynamic_sidebar( 'd-dropdowns' ); ?>
           <?php endif; ?>
     </div>
 </div>
