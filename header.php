@@ -231,8 +231,8 @@ health insurance, property &amp; liability insurance and other services for the 
               <li> 
             <?php //echo do_shortcode('[For-Districts-Drop-Down-Menu]'); ?>
             	
-    	<?php if ( is_active_sidebar( 'd-dropdowns' ) ) : ?>
-				<?php dynamic_sidebar( 'd-dropdowns' ); ?>
+    	<?php if ( is_active_sidebar( 'sidebarmain' ) ) : ?>
+				<?php dynamic_sidebar( 'sidebarmain' ); ?>
           <?php endif; ?>
                 <!----------2nd poup----------------->
                 <?php /*?><div class="row">
