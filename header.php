@@ -106,12 +106,12 @@
      
       <div class="dropdown_ct">
         <ul class="left dropdown_ct_list">
-        <li><?php if ( is_active_sidebar( 'c-dropdowns' ) ) : 
+        <?php if ( is_active_sidebar( 'c-dropdowns' ) ) : 
 				 dynamic_sidebar( 'c-dropdowns' ); 
-        endif; ?></li><li> <?php
+        endif; 
 		 if ( is_active_sidebar( 'd-dropdowns' ) ) : 
 				 dynamic_sidebar( 'd-dropdowns' ); 
-          endif; ?></li>
+          endif; ?>
         </ul>
       </div>
     </section>
