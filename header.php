@@ -225,8 +225,9 @@ health insurance, property &amp; liability insurance and other services for the 
             <ul class="dropdown m-menu">
               <!----DropDown 2nd---->
               <li> 
+            <?php echo do_shortcode('[For-Districts-Drop-Down-Menu]'); ?>
                 <!----------2nd poup----------------->
-                <div class="row">
+                <?php /*?><div class="row">
                   <div class="districts-popup">
                     <div class="head large-12">
                       <div class="churches-options">
@@ -287,7 +288,7 @@ health insurance, property &amp; liability insurance and other services for the 
                       </div>
                     </div>
                   </div>
-                </div>
+                </div><?php */?>
               </li>
             </ul>
           </li>
