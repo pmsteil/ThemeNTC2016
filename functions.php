@@ -61,8 +61,6 @@ register_sidebar(array(
   'name' => __( 'Churches Dropdowns', 'Laity' ),
   'id' => 'c-dropdowns',
   'description' => __( 'Churches Dropdowns that appears onthe Header Sections', 'Laity' ),
-  'before_widget' => '  <li class="has-dropdown">',
-  'after_widget'  => '</li>',
   'before_title' => '<h2>',
   'after_title' => '</h2>')
 );
