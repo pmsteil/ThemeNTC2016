@@ -70,8 +70,6 @@ register_sidebar(array(
   'name' => __( 'District Dropdowns', 'Laity' ),
   'id' => 'd-dropdowns',
   'description' => __( 'District Dropdowns that appears onthe Header Sections', 'Laity' ),
-  'before_widget' => '<div id="%1s" class="widget %2s">',
-  'after_widget'  => '</div>',
   'before_title' => '<h2>',
   'after_title' => '</h2>')
 );
