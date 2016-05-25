@@ -106,15 +106,14 @@
      
       <div class="dropdown_ct">
         <ul class="left dropdown_ct_list">
-          <li class="has-dropdown"><a class="drop-p-bg" href="#">For Churches</a>
+        <?php if ( is_active_sidebar( 'c-dropdowns' ) ) : ?>
+				<?php dynamic_sidebar( 'c-dropdowns' ); ?>
+          <?php endif; ?>
+          <?php /*?><li class="has-dropdown"><a class="drop-p-bg" href="#">For Churches</a>
             <ul class="dropdown m-menu">
               <!----DropDown 1st---->
 
               <li>
-                  	
-    	<?php if ( is_active_sidebar( 'c-dropdowns' ) ) : ?>
-				<?php dynamic_sidebar( 'c-dropdowns' ); ?>
-          <?php endif; ?>
                 <div class="row">
                   <div class="churches-popup">
                     <div class="head large-12">
@@ -224,7 +223,7 @@ health insurance, property &amp; liability insurance and other services for the 
                 </div>
               </li>
             </ul>
-          </li>
+          </li><?php */?>
           <?php if ( is_active_sidebar( 'd-dropdowns' ) ) : ?>
 				<?php dynamic_sidebar( 'd-dropdowns' ); ?>
           <?php endif; ?>
