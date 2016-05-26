@@ -61,12 +61,6 @@
               <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon-tw.png" alt=""> </a></li>
               <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon-fb.png" alt=""> </a></li>
               <li class="top-search">
-                <searchform>
-                  <form role="search" name="search" class="form-search" method="get" action="/">
-                    <input type="text" name="CAT_Search" title="site search" class="txt" id="CAT_Search" accesskey="4">
-                    <input type="submit" class="btn-submit cat_button" value="Search">
-                  </form>
-                </searchform>
                  <?php get_search_form() ?>
               </li>
             </ul>
