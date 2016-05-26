@@ -209,7 +209,7 @@ ul.metro-district-details-list li a{
     padding-left: 30px !important;
     padding-right: 30px !important;
     border: 1px solid #00949b !important;
-}
+} 
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
