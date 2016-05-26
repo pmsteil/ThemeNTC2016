@@ -163,7 +163,7 @@ jQuery(document).ready(function(){
 .col-right1 {
     text-align: left;
     padding-left: 30px !important;
-}
+} 
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
