@@ -63,8 +63,8 @@ register_sidebar(array(
   'description' => __( 'Churches Dropdowns that appears onthe Header Sections', 'Laity' ),
   'before_widget' => '<li class="has-dropdown">',
   'after_widget'  => '</li>',
-  'before_title' => '<h2>',
-  'after_title' => '</h2>')
+  'before_title' => ' <a class="drop-p-bg" href="#">',
+  'after_title' => '</a>')
 );
 register_sidebar(array(
   'name' => __( 'District Dropdowns', 'Laity' ),
@@ -72,8 +72,8 @@ register_sidebar(array(
   'description' => __( 'District Dropdowns that appears onthe Header Sections', 'Laity' ),
    'before_widget' => '<li class="has-dropdown">',
   'after_widget'  => '</li>',
-  'before_title' => '<h2>',
-  'after_title' => '</h2>')
+  'before_title' => ' <a class="drop-p-bg" href="#">',
+  'after_title' => '</a>')
 );
 register_sidebar(array(
   'name' => __( 'bottom sidebar', 'Laity' ),
