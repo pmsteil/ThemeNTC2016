@@ -50,11 +50,11 @@ h1.single_post_title.single_post_title12 {
 <main class="main">
   <div class="main-content-section">
     <div class="row">
-      <section id="main" class="secondary">custom post
+      <section id="main" class="secondary">
         <!-- left column -->
         <article class="large-8 medium-7 left-sidebar-ct columns">
-        <div class="blogtitle blogtitle12">North Texas Conference News</div>
-        <p class="description description12">A New Vision, A New Voice ~ The North Texas Conference</p>
+        <!--<div class="blogtitle blogtitle12">North Texas Conference News</div>
+        <p class="description description12">A New Vision, A New Voice ~ The North Texas Conference</p>-->
 
 		<?php
 		// Start the loop.
@@ -69,7 +69,7 @@ h1.single_post_title.single_post_title12 {
 			get_template_part( 'content', get_post_format() );
                         echo '<h1 class="single_post_title single_post_title12">'.get_the_title().'</h1>';
 						?>
-	<div class="post-details post-details12">Date Posted: <?php echo the_time(' l, F jS, Y') ?></div>
+	<?php /*?><div class="post-details post-details12">Date Posted: <?php echo the_time(' l, F jS, Y') ?></div><?php */?>
                         <?php
                         echo "<hr>";
                         the_content();
