@@ -106,20 +106,18 @@
      
       <div class="dropdown_ct">
         
-		<ul class="left dropdown_ct_list"> 
-			  <li class="has-dropdown"><a class="drop-p-bg" href="#">For Churches</a>
+		<ul class="left dropdown_ct_list">
+        <a class="drop-p-bg" href="#">For Churches</a>
 		<?php 
 		 if ( is_active_sidebar( 'c-dropdowns' ) ) : 
 				 dynamic_sidebar( 'c-dropdowns' ); 
         endif; ?>
-        </li>
-        <li class="has-dropdown">
+        
         	<a class="drop-p-bg" href="#">For Districts</a>
         <?php
 		 if ( is_active_sidebar( 'd-dropdowns' ) ) : 
 				 dynamic_sidebar( 'd-dropdowns' ); 
           endif; ?>
-          </li>
         </ul>
        
       </div>
