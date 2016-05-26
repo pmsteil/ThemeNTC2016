@@ -199,6 +199,17 @@ ul.metro-district-details-list {
 ul.metro-district-details-list li a{
 	line-height: 20px !important;
 }
+.metro-btn-holder a span {
+    border: none !important;
+    padding: 0px !important;
+    border-radius: 0px !important;
+    height: auto !important;
+}
+.metro-district-popup .metro-btn-holder a {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    border: 1px solid #00949b !important;
+}
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
