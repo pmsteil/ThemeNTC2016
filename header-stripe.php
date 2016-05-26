@@ -145,8 +145,24 @@ jQuery(document).ready(function(){
 .metro-district-popup .align-left {
     float: left;
 }
-.metro-district-details-li{
-	float:left;
+.metro-district-popup .align-left {
+    float: left;
+}
+.district-popup .col-center1 ul li a {
+    padding-left: 0px !important;
+    line-height: 20px !important;
+}
+.col-center1 {
+    text-align: left;
+    padding-left: 30px !important;
+}
+.district-popup .col-right1 ul li a {
+    padding-left: 0px !important;
+    line-height: 20px !important;
+}
+.col-right1 {
+    text-align: left;
+    padding-left: 30px !important;
 }
 </style>
 <div class="stripe_heder_wrapper">
