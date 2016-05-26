@@ -131,6 +131,24 @@ jQuery(document).ready(function(){
 	jQuery('.top-bar-section ul.dropdown.m-menu').unwrap();
 	});
 </script>
+<style>
+.district-popup.metro-district-popup {
+    width: 100%;
+}
+.metro-district-popup .col-left1 {
+    text-align: left;   
+	 padding-left: 30px !important;
+}
+.col-left1 a {
+    padding: 0px !important;
+}
+.metro-district-popup .align-left {
+    float: left;
+}
+.metro-district-details-li{
+	float:left;
+}
+</style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
     

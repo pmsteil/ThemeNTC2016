@@ -131,7 +131,3 @@ jQuery(document).ready(function(){
 	jQuery('.top-bar-section ul.dropdown.m-menu').unwrap();
 	});
 </script>
-<style>
-.district-popup {
-}
-</style>
