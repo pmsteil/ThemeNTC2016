@@ -111,11 +111,15 @@
 		 if ( is_active_sidebar( 'c-dropdowns' ) ) : 
 				 dynamic_sidebar( 'c-dropdowns' ); 
         endif; ?>
-        
+        <ul class="dropdown m-menu">
+              <!----DropDown 2nd---->
+              <li>
         <?php
 		 if ( is_active_sidebar( 'd-dropdowns' ) ) : 
 				 dynamic_sidebar( 'd-dropdowns' ); 
           endif; ?>
+          </li>
+          </ul>
         </ul>
        
       </div>
