@@ -185,12 +185,19 @@ jQuery(document).ready(function(){
     text-shadow: none !important;
 }
 .col-right1 .btn-learn-more span,.col-center1 .btn-learn-more span {
-    border: 1px solid #c98a1d !important;
+    border: none !important;
     display: block !important;
-    border-radius: 4px !important;
-    -webkit-border-radius: 4px !important;
-    -moz-border-radius: 4px !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
     height: 28px !important;
+}
+ul.metro-district-details-list {
+    float: left !important;
+    width: 49% !important;
+}
+ul.metro-district-details-list li a{
+	line-height: 20px !important;
 }
 </style>
 <div class="stripe_heder_wrapper">
