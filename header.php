@@ -67,6 +67,7 @@
                     <input type="submit" class="btn-submit cat_button" value="Search">
                   </form>
                 </searchform>
+                 <?php get_search_form() ?>
               </li>
             </ul>
           </single-socials>
