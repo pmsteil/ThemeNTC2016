@@ -241,6 +241,7 @@ ul.dropdown_ct_list li {
 	background: #65421c url(../images/bg-districts.jpg);
 	box-shadow: 0 0 20px rgba(0,0,0,0.25) inset;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	width:100% !important;
 }
 .districts-popup .head h2 {
 	color: #FFFFFF;
