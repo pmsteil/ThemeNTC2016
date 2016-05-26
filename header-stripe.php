@@ -164,6 +164,34 @@ jQuery(document).ready(function(){
     text-align: left;
     padding-left: 30px !important;
 } 
+.col-right1 .btn-learn-more,.col-center1 .btn-learn-more{
+	border: 1px solid #9b5512 !important;
+    display: inline-block  !important;
+    text-align: center  !important;
+    background-color: #b36015 !important;
+    background: -moz-linear-gradient(top, #c98a1d 0%, #b36015 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c98a1d), color-stop(100%, #b36015)) !important;
+    background: -webkit-linear-gradient(top, #c98a1d 0%, #b36015 100%) !important;
+    background: -o-linear-gradient(top, #c98a1d 0%, #b36015 100%) !important;
+    background: -ms-linear-gradient(top, #c98a1d 0%, #b36015 100%) !important;
+    background: linear-gradient(top, #c98a1d 0%, #b36015 100%) !important;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    height: 30px !important;
+    line-height: 28px !important;
+    color: #fff !important;
+    font-size: 12px !important;
+    text-shadow: none !important;
+}
+.col-right1 .btn-learn-more span,.col-center1 .btn-learn-more span {
+    border: 1px solid #c98a1d !important;
+    display: block !important;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    height: 28px !important;
+}
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
