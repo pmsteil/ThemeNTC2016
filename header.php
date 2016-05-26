@@ -126,3 +126,8 @@
 </div>
 <!--/NAVBAR MAIN--> 
 <!--========bottom heder end==============--> 
+<script>
+jQuery(document).ready(function(){
+	jQuery('.top-bar-section ul.dropdown.m-menu').unwrap();
+	});
+</script>
