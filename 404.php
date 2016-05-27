@@ -127,13 +127,7 @@
 </div>
 <!--/NAVBAR MAIN--> 
 <!--========bottom heder end==============--> 
-<script>
-jQuery(document).ready(function(){
-	jQuery('.top-bar-section ul.dropdown.m-menu').unwrap();
-	//jQuery('ul.icon-nav li').parent().parent().unwrap();
-	});
-	
-</script>
+
 <style>
 div#text-79 {
     display: inline-block;
