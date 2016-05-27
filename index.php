@@ -9,8 +9,6 @@
         <!-- left column -->
         <article class="large-8 medium-7 index_article left-sidebar-ct columns">
           <div id="maincontent">
-            <slickslider category="home"><img class="front-page-slider-margin" src="<?php echo get_template_directory_uri() ?>/images/front-page-slider1.PNG"/></slickslider>
-             <?php echo do_shortcode('[wonderplugin_carousel id="1"]'); ?>
             <div id="District-Page">
               <div class="box">
                 <div class="title title_index">
