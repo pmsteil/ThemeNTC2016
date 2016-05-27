@@ -128,5 +128,7 @@
 <script>
 jQuery(document).ready(function(){
 	jQuery('.top-bar-section ul.dropdown.m-menu').unwrap();
+	jQuery('ul.icon-nav li').unwrap();
 	});
+	
 </script>
