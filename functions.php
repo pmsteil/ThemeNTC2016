@@ -1200,4 +1200,4 @@ function ThemeNTC2016_searchform( $form ) {
                     ?>         
                 </ul>
  <?php }
- add_shortcode('front-sidebar','front_page_news_sidebar');
+ add_shortcode('front-sidebar','front_page_news_sidebar'); 
