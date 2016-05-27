@@ -112,10 +112,10 @@
         
 		<ul class="left dropdown_ct_list">
 		<li class="has-dropdown not-click"> <a class="drop-p-bg" href="#">For churches</a>	
-        <?php do_shortcode('[For-Churches-Drop-Down-Menu]');?>
+        <?php echo do_shortcode('[For-Churches-Drop-Down-Menu]');?>
         </li>
 		<li class="has-dropdown not-click"> <a class="drop-p-bg" href="#">For District</a>	
-         <?php do_shortcode('[For-Districts-Drop-Down-Menu]');?>	
+         <?php echo do_shortcode('[For-Districts-Drop-Down-Menu]');?>	
         </li>
         </ul>
        
