@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Appointments
+    Template Name: appointments
  *
  * The template for displaying all single posts and attachments
  *
