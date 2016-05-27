@@ -132,3 +132,8 @@ jQuery(document).ready(function(){
 	});
 	
 </script>
+<style>
+div#text-79 {
+    display: inline-block;
+}
+</style>

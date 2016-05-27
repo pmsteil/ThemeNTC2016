@@ -55,18 +55,17 @@
         <div class="large-12">
           <single-socials>
             <ul class="icon-nav">
-              <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon-star.png" alt=""> </a></li>
+            <?php /*?>  <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon-star.png" alt=""> </a></li>
               <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon-home.png" alt=""> </a></li>
               <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon-rss.png" alt=""> </a></li>
               <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon-tw.png" alt=""> </a></li>
-              <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon-fb.png" alt=""> </a></li>
+              <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/icon-fb.png" alt=""> </a></li><?php */?>
+			  <?php 
+		 if ( is_active_sidebar( 'social-icon' ) ) : 
+				 dynamic_sidebar( 'social-icon' ); 
+        endif; ?>
               <li class="top-search">
-                <searchform>
-                  <form role="search" name="search" class="form-search" method="get" action="/">
-                    <input type="text" name="CAT_Search" title="site search" class="txt" id="CAT_Search" accesskey="4">
-                    <input type="submit" class="btn-submit cat_button" value="Search">
-                  </form>
-                </searchform>
+                 <?php get_search_form() ?>
               </li>
             </ul>
           </single-socials>
@@ -210,6 +209,9 @@ ul.metro-district-details-list li a{
     padding-right: 30px !important;
     border: 1px solid #00949b !important;
 } 
+div#text-79 {
+    display: inline-block;
+}
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
