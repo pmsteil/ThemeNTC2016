@@ -127,7 +127,7 @@
 <!--========bottom heder end==============--> 
 <script>
 jQuery(document).ready(function(){
-	jQuery('.top-bar-section ul.dropdown.m-menu').unwrap();
+	jQuery('.top-bar-section ul.dropdown.m-menu').parent().parent().unwrap();
 	jQuery('ul.icon-nav li').unwrap();
 	});
 	
