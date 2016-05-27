@@ -84,6 +84,15 @@ register_sidebar(array(
   'before_title' => '<h2>',
   'after_title' => '</h2>')
 );
+register_sidebar(array(
+  'name' => __( 'Social Icon', 'Laity' ),
+  'id' => 'social-icon',
+  'description' => __( 'Social Icon that appears on the header menu', 'Laity' ),
+  'before_widget' => '<div id="%1s" class="widget %2s">',
+  'after_widget'  => '</div>',
+  'before_title' => '<h2>',
+  'after_title' => '</h2>')
+);
 
 
 register_sidebar(array(
