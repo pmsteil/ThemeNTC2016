@@ -41,10 +41,7 @@
 .twit {
     text-align: right;
 }
-.dropdown_ct_list li:last-child a.drop-p-bg {
-    width: 170px;
-    background: url(http://dev.northtexasumc.org/wp-content/uploads/2016/05/btn-for-districts-blue.png) no-repeat !important;
-}
+
 .secondary{
 	border-radius:0px !important;
 }
