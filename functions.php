@@ -1,8 +1,5 @@
 <?php 
 require_once('lib/nav.php');
-require_once('lib/clean.php');
-require_once('lib/enqueue-style.php');
-require_once('lib/foundation.php');
 if( ! function_exists( 'reverie_theme_support' ) ) {
     function reverie_theme_support() {
         // Add language supports.
