@@ -48,6 +48,11 @@
 .secondary{
 	border-radius:0px !important;
 }
+@media only screen and (min-width: 1025px){
+.right-sidebar-inner-ct {
+    padding: 30px 5px 7px 75px;
+}
+}
 </style> 
 
  <?php if ( have_posts() ) :
