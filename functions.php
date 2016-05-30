@@ -1211,18 +1211,21 @@ function ThemeNTC2016_searchform( $form ) {
  <?php }
  add_shortcode('front-sidebar','front_page_news_sidebar'); 
  
- function ntc_list_category_products($atts) {     
+ function ntc_list_category_products($atts) {  
+ echo '<pre>';print_r($atts);echo '</pre>';   
  extract( shortcode_atts( array(
         'category' => 0,
          'per_page' => 1,
          'pagerange' =>2,
+		 'post_type' => 3,
     ), $atts ) );
    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
    $cat_name = $category;
    $per_page=$per_page;
    $pagerange=$pagerange;
+   $post_type=$post_type;
     /*$args = array( 'post_type' => 'product', 'posts_per_page' => $per_page,'paged' => $paged, 'product_cat' => $cat_name );*/
-	$args = array( 'category'=>219,'post_type' => 'news','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
+	$args = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>$per_page, 'order'=> 'ASC', 'orderby' => 'id' );
                     $postslist = get_posts( $args );
                     foreach ( $postslist as $post ) :
                     setup_postdata( $post ); ?> 
