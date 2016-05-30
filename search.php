@@ -132,6 +132,10 @@
 div#text-79 {
     display: inline-block;
 }
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 </style>
 
 <!--========main content section start==============-->
