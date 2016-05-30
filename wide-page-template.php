@@ -45,6 +45,9 @@
     width: 170px;
     background: url(http://dev.northtexasumc.org/wp-content/uploads/2016/05/btn-for-districts-blue.png) no-repeat !important;
 }
+.secondary{
+	border-radius:0px !important;
+}
 </style> 
 
  <?php if ( have_posts() ) :
@@ -54,13 +57,12 @@
 
 <main class="main">
     <div class="main-content-section">
-        <div class="row">
         <section id="main" class="secondary">
                  <h1><?php echo the_title(); ?></h1>
                 <?php the_content(); ?>
            
        </section>
-        </div>
+        
     </div>
 </main>
 
