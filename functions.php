@@ -1234,10 +1234,10 @@ function ThemeNTC2016_searchform( $form ) {
                                <div class="post-body">
                                  <li class="blog-list-title" id="postnum1432883">
                                     <span class="blog-list-title-only">
-                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                    <a href="<?php echo $post->the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php echo $post->the_title_attribute(); ?>"><?php echo $post->the_title(); ?></a>
                                     </span>
                                    <div id="postText1432883">
-                                    <div class="blog-thumbnail"><?php the_post_thumbnail(); ?></div>
+                                    <div class="blog-thumbnail"><?php echo $post->the_post_thumbnail(); ?></div>
                                     <?php the_excerpt(); ?>
                                     <a class="blog-read-more" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
                                    </div>
