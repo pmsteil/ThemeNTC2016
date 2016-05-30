@@ -1212,7 +1212,7 @@ function ThemeNTC2016_searchform( $form ) {
  add_shortcode('front-sidebar','front_page_news_sidebar'); 
  
  function ntc_list_category_products($atts) {  
- echo '<pre>';print_r($atts);echo '</pre>';   
+   
  extract( shortcode_atts( array(
         'category' => 0,
          'per_page' => 1,
@@ -1224,8 +1224,7 @@ function ThemeNTC2016_searchform( $form ) {
    $per_page=$per_page;
    $pagerange=$pagerange;
    $post_type=$post_type;
-    /*$args = array( 'post_type' => 'product', 'posts_per_page' => $per_page,'paged' => $paged, 'product_cat' => $cat_name );*/
-	$args = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>$per_page, 'order'=> 'ASC', 'orderby' => 'id' );
+   $args = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>$per_page, 'order'=> 'ASC', 'orderby' => 'id' );
                     $postslist = get_posts( $args );
                     foreach ( $postslist as $post ) :
                     setup_postdata( $post ); ?> 
@@ -1234,10 +1233,10 @@ function ThemeNTC2016_searchform( $form ) {
                                <div class="post-body">
                                  <li class="blog-list-title" id="postnum1432883">
                                     <span class="blog-list-title-only">
-                                    <a href="<?php echo $post->the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php echo $post->the_title_attribute(); ?>"><?php echo $post->the_title(); ?></a>
+                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                                     </span>
                                    <div id="postText1432883">
-                                    <div class="blog-thumbnail"><?php echo $post->the_post_thumbnail(); ?></div>
+                                    <div class="blog-thumbnail"><?php the_post_thumbnail(); ?></div>
                                     <?php the_excerpt(); ?>
                                     <a class="blog-read-more" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
                                    </div>
