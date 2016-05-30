@@ -1,81 +1,67 @@
-<?php
-/*
-    Template Name: search
-*/
-?>
 <?php get_header(); ?>
-<!--========main content section start==============-->
 
-<main class="main">
-  <div class="main-content-section">
-    <div class="row">
-      <section id="main" class="secondary">
-        <!-- left column -->
-        <article class="large-8 medium-7 left-sidebar-ct columns">
-          <div id="maincontent">
-            <h1>Site Search</h1>
-            	 <?php get_search_form() ?>
-            
-             <searchresults>
-                  <h1 class="content-title">Search Results for "<?php echo get_search_query(); ?>"</h1>
+	<div id="page">
 
-                  <?php
-                  $args = array( 'paged'=> $paged,
-                                 'post_type' => 'post');
-                  $more = 0;
-                  query_posts($args);
-                  $image_url = $site_options['blog_image'];
-                  ?>
-                  <?php if (have_posts()) : $count = 0; ?>
-                  <?php while (have_posts()) : the_post(); $count++; ?>
-                      <?php
-                      $ImageID = get_post_thumbnail_id($post->ID);
-                      if($ImageID)
-                         // get the image url
-                         $image_url = wp_get_attachment_url($ImageID);
-                      $excerpt = get_the_excerpt();
-                      $excerpt = preg_replace('/\s+?(\S+)?$/', '', $excerpt);
-                      ?>
-                        <div class="recent-box clearfix">
-                          <div class="recent-box-img">
-                            <img src="<?php echo $image_url; ?>" alt="">
-                          </div>
-                          <div class="recent-box-text">
-                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <p>
-                              <?php echo $excerpt; ?>
-                              <a href="<?php the_permalink(); ?>">Read More</a>
-                            </p>
-                          </div>
-                        </div>
-                  <?php endwhile; else: ?>
-                    <div class="post">
-                        <p>Sorry, no posts matched your criteria.</p>
-                    </div><!-- /.post -->
-                  <?php endif; ?>
+		<div class="column large-9 first" id="maincontent">
 
-                  <?php
-                    if(function_exists('wp_pagenavi')) {
-                      wp_pagenavi();
-                    }
-                    else {
-                      $next_page_link = next_page_not_post('');
-                      if (function_exists('apply_all_short_codes'))
-                         $next_page_link =  apply_all_short_codes($next_page_link);
-                      echo '<div style="clear:both">' . $next_page_link . '</div>';
-                    }
-                  ?></searchresults>
-          
-          </div>
-        </article>
-        <!-- right column -->
-        <aside class="large-4 medium-5 columns right-sidebar-ct">
-        <?php get_sidebar( 'sidebarmain' ) ?>
-        </aside>
-      </section>
-    </div>
-  </div>
-</main>
-<!--========main content section start==============-->
-<!--===Footer section starts===-->
+			<div class="content">
+
+	<?php if (have_posts()) : ?>
+
+		<h2 class="pagetitle">Search Results for "<?php echo $s ?>"</h2>
+
+		<div class="navigation">
+			<div class="alignleft"><?php next_posts_link('&laquo; Previous') ?></div>
+			<div class="alignright"><?php previous_posts_link('Next &raquo;') ?></div>
+		</div>
+		
+		<div class="clear"></div>
+
+		<?php while (have_posts()) : the_post(); ?>
+
+			<div class="post" id="post-<?php the_ID(); ?>">
+
+				<p class="large nomargin"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></p>
+				<?php
+				// Support for "Search Excerpt" plugin
+				// http://fucoder.com/code/search-excerpt/
+				if ( function_exists('the_excerpt') && is_search() ) {
+					the_excerpt();
+				} ?>
+				<p class="small">
+					<?php the_time('F jS, Y') ?> &nbsp;|&nbsp; 
+					<!-- by <?php the_author() ?> -->
+					Published in
+					<?php the_category(', ');
+						if($post->comment_count > 0) { 
+								echo ' &nbsp;|&nbsp; ';
+								comments_popup_link('', '1 Comment', '% Comments'); 
+						}
+					?>
+				</p>
+				
+			</div>
+			
+			<hr>
+		<?php endwhile; ?>
+
+		<div class="navigation">
+			<div class="alignleft"><?php next_posts_link('&laquo; Previous') ?></div>
+			<div class="alignright"><?php previous_posts_link('Next &raquo;') ?></div>
+		</div>
+
+	<?php else : ?>
+
+		<h2 class="center">No posts found. Try a different search?</h2>
+		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+
+	<?php endif; ?>
+
+		</div> <!-- /content -->
+	</div> <!-- /maincontent-->
+
+	<?php get_sidebar(); ?>
+
+	</div> <!-- /page -->
+
 <?php get_footer(); ?>
