@@ -41,7 +41,7 @@
     text-align: right;
 	 margin-bottom: 8px;
 }
-.twit {
+.twit { 
     text-align: right;
 }
 .dropdown_ct_list li:last-child a.drop-p-bg {
