@@ -1225,9 +1225,11 @@ function ThemeNTC2016_searchform( $form ) {
    $pagerange=$pagerange;
    $post_type=$post_type;
    $args = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>$per_page, 'order'=> 'ASC', 'orderby' => 'id' );
+   $args1 = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>-1, 'order'=> 'ASC', 'orderby' => 'id' );
+   $postslist_count =count(get_posts( $args1 ));
                     $postslist = get_posts( $args );
 					echo '<pre>';print_r($postslist);echo '</pre>';
-					echo $postslist->max_num_pages;
+					echo $postslist_count;
                     foreach ( $postslist as $post ) :
                     setup_postdata( $post ); ?> 
        
@@ -1249,7 +1251,7 @@ function ThemeNTC2016_searchform( $form ) {
                     endforeach; 
         echo '<div style="clear:both;"></div>';
       if (function_exists(ntc_custom_pagination)) {
-        ntc_custom_pagination($postslist->max_num_pages,$pagerange,$paged);
+        ntc_custom_pagination($postslist_count,$pagerange,$paged);
       }
     
 		wp_reset_postdata();
