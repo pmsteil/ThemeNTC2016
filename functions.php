@@ -1224,7 +1224,7 @@ function ThemeNTC2016_searchform( $form ) {
    $per_page=$per_page;
    $pagerange=$pagerange;
    $post_type=$post_type;
-   $args = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>$per_page, 'order'=> 'ASC', 'orderby' => 'id' );
+   $args = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged, 'order'=> 'ASC', 'orderby' => 'id' );
    $args1 = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>-1, 'order'=> 'ASC', 'orderby' => 'id' );
    $postslist_count =count(get_posts( $args1 ));
                     $postslist = get_posts( $args );
