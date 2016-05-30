@@ -1226,6 +1226,8 @@ function ThemeNTC2016_searchform( $form ) {
    $post_type=$post_type;
    $args = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>$per_page, 'order'=> 'ASC', 'orderby' => 'id' );
                     $postslist = get_posts( $args );
+					echo '<pre>';print_r($postslist);echo '</pre>';
+					echo $postslist->max_num_pages;
                     foreach ( $postslist as $post ) :
                     setup_postdata( $post ); ?> 
        
