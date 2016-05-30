@@ -76,7 +76,6 @@
     </div>
   </div>
 </main>
-
 <!--========main content section start==============-->
 <!--===Footer section starts===-->
 <?php get_footer(); ?>
