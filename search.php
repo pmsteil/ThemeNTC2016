@@ -1,10 +1,22 @@
+<?php
+/*
+    Template Name: search
+*/
+?>
 <?php get_header(); ?>
+<!--========main content section start==============-->
 
-	<div id="page">
-
-		<div class="column large-9 first" id="maincontent">
-
-			<div class="content">
+<main class="main">
+  <div class="main-content-section">
+    <div class="row">
+      <section id="main" class="secondary">
+        <!-- left column -->
+        <article class="large-8 medium-7 left-sidebar-ct columns">
+          <div id="maincontent">
+            <h1>Site Search</h1>
+            	 <?php get_search_form() ?>
+            
+             <div class="content">
 
 	<?php if (have_posts()) : ?>
 
@@ -57,11 +69,18 @@
 
 	<?php endif; ?>
 
-		</div> <!-- /content -->
-	</div> <!-- /maincontent-->
-
-	<?php get_sidebar(); ?>
-
-	</div> <!-- /page -->
-
+		</div>
+          
+          </div>
+        </article>
+        <!-- right column -->
+        <aside class="large-4 medium-5 columns right-sidebar-ct">
+        <?php get_sidebar( 'sidebarmain' ) ?>
+        </aside>
+      </section>
+    </div>
+  </div>
+</main>
+<!--========main content section start==============-->
+<!--===Footer section starts===-->
 <?php get_footer(); ?>
