@@ -11,7 +11,6 @@
     <div class="row">
       <section id="main" class="secondary">
         <!-- left column -->
-        <article class="large-8 medium-7 left-sidebar-ct columns">
           <div id="maincontent">
             <h1>Site Search</h1>
             	 <?php get_search_form() ?>
@@ -75,9 +74,6 @@
           </div>
         </article>
         <!-- right column -->
-        <aside class="large-4 medium-5 columns right-sidebar-ct">
-        <?php get_sidebar( 'sidebarmain' ) ?>
-        </aside>
       </section>
     </div>
   </div>
