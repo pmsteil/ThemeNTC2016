@@ -1211,7 +1211,7 @@ function ThemeNTC2016_searchform( $form ) {
  <?php }
  add_shortcode('front-sidebar','front_page_news_sidebar'); 
  
- add_action( 'init', 'nct_custom_post_type', 0 ); 
+ 
 
  
  function ntc_list_category_post($atts) {  
