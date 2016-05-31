@@ -1468,6 +1468,9 @@ ul.right_menu_sec-list li.divider {
 .churches-choose-ct2 a {
     text-align: center;
 }
+#maincontent {
+    margin-right: 0px !important;
+}
 
 }
 @media only screen  and (min-width: 490px) and (max-width: 640px){
