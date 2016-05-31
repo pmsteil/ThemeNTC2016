@@ -1236,7 +1236,7 @@ function ntc_list_category_post($atts) {
 				   ?>
                  <div class="box">
                 <div class="title title_index">
-                  <h2>News Around the North Texas Conference <?php echo $top_tripe_title; ?></h2>
+                  <h2><?php echo $top_tripe_title; ?></h2>
                 </div>
                 <div class="box-holder">
                   <div class="news-row"> 
