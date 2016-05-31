@@ -1211,13 +1211,16 @@ function ThemeNTC2016_searchform( $form ) {
  <?php }
  add_shortcode('front-sidebar','front_page_news_sidebar'); 
  
- function ntc_list_category_products($atts) {  
+ add_action( 'init', 'nct_custom_post_type', 0 ); 
+
+ 
+ function ntc_list_category_post($atts) {  
    
  extract( shortcode_atts( array(
         'category' => 0,
          'per_page' => 1,
          'pagerange' =>2,
-		 'post_type' => 3,
+	 'post_type' => 3,
     ), $atts ) );
    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
    $cat_name = $category;
@@ -1225,15 +1228,14 @@ function ThemeNTC2016_searchform( $form ) {
    $pagerange=$pagerange;
    $post_type=$post_type;
    $args = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged, 'order'=> 'ASC', 'orderby' => 'id' );
-   $args1 = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>-1, 'order'=> 'ASC', 'orderby' => 'id' );
-   $postslist_count =count(get_posts( $args1 ));
-                    $postslist = get_posts( $args );
-					echo '<pre>';print_r($postslist);echo '</pre>';
-					echo $postslist_count;
-                    foreach ( $postslist as $post ) :
-                    setup_postdata( $post ); ?> 
-       
-                          <div id="blogbackground">
+   
+                    $postslist = new WP_Query( $args );
+					
+                   if ( $postslist->have_posts() ) :
+        
+		   while ( $postslist->have_posts() ) : $postslist->the_post();
+		      ?>
+                            <div id="blogbackground">
                                <div class="post-body">
                                  <li class="blog-list-title" id="postnum1432883">
                                     <span class="blog-list-title-only">
@@ -1247,23 +1249,23 @@ function ThemeNTC2016_searchform( $form ) {
                                  </li>
                                 </div>
                             </div>
-       <?php
-                    endforeach; 
+<?php
+                   endwhile;          
+                   endif; 
+                      
+                   
         echo '<div style="clear:both;"></div>';
       if (function_exists(ntc_custom_pagination)) {
-        ntc_custom_pagination($postslist_count,$pagerange,$paged);
+        ntc_custom_pagination($postslist->max_num_pages,$pagerange,$paged);
       }
     
 		wp_reset_postdata();
 }
-add_shortcode('ntclistcategoryproducts', 'ntc_list_category_products');
-
+add_shortcode('ntclistcategorypost', 'ntc_list_category_post');
 function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
-
   if (empty($pagerange)) {
     $pagerange = 2;
   }
-
   /**
    * This first part of our function is a fallback
    * for custom pagination inside a regular loop that
@@ -1284,14 +1286,13 @@ function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
         $numpages = 1;
     }
   }
-
   /** 
    * We construct the pagination arguments to enter into our paginate_links
    * function. 
    */
   $pagination_args = array(
     'base'            => get_pagenum_link(1) . '%_%',
-    'format'          => 'page/%#%',
+    'format'          => '?page=%#%',
     'total'           => $numpages,
     'current'         => $paged,
     'show_all'        => False,
@@ -1304,14 +1305,11 @@ function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
     'add_args'        => false,
     'add_fragment'    => ''
   );
-
   $paginate_links = paginate_links($pagination_args);
-
   if ($paginate_links) {
     echo "<nav class='custom-pagination'>";
       echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
       echo $paginate_links;
     echo "</nav>";
   }
-
 }
