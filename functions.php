@@ -195,7 +195,7 @@ register_sidebar(array(
   'after_widget'  => '</div>',
   'before_title' => '<strong>',
   'after_title' => '</strong>')
-);
+); 
 
 
 }
