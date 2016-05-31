@@ -7,7 +7,6 @@
 
  <?php if ( have_posts() ) :
 	  while ( have_posts() ) : the_post(); 
-	  the_content();
 ?>
 
 <?php endwhile; endif; ?>
@@ -19,7 +18,7 @@
         <!-- left column -->
         <article class="large-8 medium-7 index_article left-sidebar-ct columns">
           <div id="maincontent">
-            <slickslider category="home"><img class="front-page-slider-margin" src="<?php echo get_template_directory_uri() ?>/images/front-page-slider1.PNG"/></slickslider>
+            <slickslider category="home"><img class="front-page-slider-margin" src="http://dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/images/front-page-slider1.PNG"/></slickslider>
              <?php echo do_shortcode('[wonderplugin_carousel id="1"]'); ?>
             <div id="District-Page">
               <div class="box">
@@ -63,7 +62,7 @@
           </div>
           <div class="footer_media"> <a class="readmore" href="/_blog/North_Texas_Conference_News">Read more News Around The Conference »</a><br>
             <a href="/subscribe" class="button" title="Subscribe to The North Texas Connection email news" style="margin-top: 5px; margin-right: 20px; margin-bottom: 10px;">Subscribe</a> <a href="/stories" class="button" title="Submit a story" style="margin-top: 5px; margin-bottom: 10px;">Submit a Story</a> <br>
-            Subscribe to the RSS Feed: <a target="_blank" href="images/icon-rss.png?vs=b2004.r486545-phase1" id="rss" catid="58,12423" sw="1"><img style="border-width: 0px; border-style: solid;" src="<?php echo get_template_directory_uri() ?>/images/icon-rss.png?vs=b2004.r486545-phase1" alt="RSS" height="16" width="16"></a> </div>
+            Subscribe to the RSS Feed: <a target="_blank" href="images/icon-rss.png?vs=b2004.r486545-phase1" id="rss" catid="58,12423" sw="1"><img style="border-width: 0px; border-style: solid;" src="http://dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/images/icon-rss.png?vs=b2004.r486545-phase1" alt="RSS" height="16" width="16"></a> </div>
           <br>
           <br>
         </article>
