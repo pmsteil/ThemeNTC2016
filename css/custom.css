@@ -1586,3 +1586,9 @@ li#comment-2 {
 	line-height: 1.2 !important;
 	letter-spacing: 0px !important;
 }
+span.page-numbers.current {
+    color: #b45f06;
+}
+nav.custom-pagination, nav.custom-pagination a {
+    font-size: 15px;
+}
