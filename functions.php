@@ -1212,9 +1212,7 @@ function ThemeNTC2016_searchform( $form ) {
  add_shortcode('front-sidebar','front_page_news_sidebar'); 
  
  
-
- 
- function ntc_list_category_post($atts) {  
+function ntc_list_category_post($atts) {  
    
  extract( shortcode_atts( array(
         'category' => 0,
@@ -1222,6 +1220,7 @@ function ThemeNTC2016_searchform( $form ) {
          'pagerange' =>2,
 	 'post_type' => 3,
     ), $atts ) );
+   global $paged;
    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
    $cat_name = $category;
    $per_page=$per_page;
@@ -1307,9 +1306,9 @@ function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
   );
   $paginate_links = paginate_links($pagination_args);
   if ($paginate_links) {
-    echo "<nav class='custom-pagination'>";
+      echo "<nav class='custom-pagination'>";
       echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
       echo $paginate_links;
-    echo "</nav>";
+      echo "</nav>";   
   }
 }
