@@ -1219,6 +1219,7 @@ function ntc_list_category_post($atts) {
          'per_page' => 1,
          'pagerange' =>2,
 	 'post_type' => 3,
+	 'top_tripe_title' => 4,
     ), $atts ) );
    global $paged;
    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
@@ -1226,6 +1227,7 @@ function ntc_list_category_post($atts) {
    $per_page=$per_page;
    $pagerange=$pagerange;
    $post_type=$post_type;
+   $top_tripe_title=$top_tripe_title;
    $args = array( 'category'=>$category,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged, 'order'=> 'ASC', 'orderby' => 'id' );
    
                     $postslist = new WP_Query( $args );
@@ -1234,7 +1236,7 @@ function ntc_list_category_post($atts) {
 				   ?>
                  <div class="box">
                 <div class="title title_index">
-                  <h2>News Around the North Texas Conference</h2>
+                  <h2>News Around the North Texas Conference <?php echo $top_tripe_title; ?></h2>
                 </div>
                 <div class="box-holder">
                   <div class="news-row"> 
