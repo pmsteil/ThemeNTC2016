@@ -1325,5 +1325,5 @@ function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
       echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
       echo $paginate_links;
       echo "</nav>";   
-  } 
+  }  
 }
