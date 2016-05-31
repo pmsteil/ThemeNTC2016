@@ -9,10 +9,9 @@
 <?php
 
 if ( 'posts' == get_option( 'show_on_front' ) ) {
-    include( get_home_template() );
-} 
- ?>
-<main class="main">
+    //include( get_home_template() );
+	?>
+	<main class="main">
   <div class="main-content-section">
     <div class="row">
       <section id="main" class="secondary"> 
@@ -84,6 +83,12 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
     </div>
   </div>
 </main>
+<?php
+} else {
+    include( get_page_template() );
+} 
+ ?>
+
 
 <!--========main content section start==============--> 
 
