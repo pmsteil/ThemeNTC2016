@@ -1313,7 +1313,3 @@ function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
     echo "</nav>";
   }
 }
-function themeslug_filter_front_page_template( $template ) {
-    return is_home() ? '' : $template;
-}
-add_filter( 'frontpage_template', 'themeslug_filter_front_page_template' );
