@@ -45,6 +45,12 @@
 .secondary{
 	border-radius:0px !important;
 }
+.secondary_wide h1,.secondary_wide p {
+    color: #fff;
+}
+.secondary_wide{
+	padding:0 5px;
+}
 </style> 
 
  <?php if ( have_posts() ) :
