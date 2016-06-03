@@ -1215,9 +1215,9 @@ function ThemeNTC2016_searchform( $form ) {
 function ntc_list_category_post($atts) {  
    
  extract( shortcode_atts( array(
-        'category' => 0,
-         'per_page' => 1,
-         'pagerange' =>2,
+	'category' => 0,
+	 'per_page' => 1,
+	 'pagerange' =>2,
 	 'post_type' => 3,
 	 'top_stripe_title' => 4,
 	 'order_by_post' =>5,
@@ -1230,7 +1230,7 @@ function ntc_list_category_post($atts) {
    $post_type=$post_type;
    $top_stripe_title=$top_stripe_title;
    $order_by_post=$order_by_post;
-   $args = array( 'category'=>$category,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged, 'order'=> $order_by_post, 'orderby' => 'id' );
+   $args = array( 'category'=>$category,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' );
    
                     $postslist = new WP_Query( $args );
 					
