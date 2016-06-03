@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Wide page template
+    Template Name: Wide page Blank
 */
 ?>
 <?php get_header(); ?>
@@ -54,7 +54,7 @@
 
 <main class="main">
     <div class="main-content-section">
-        <section id="main" class="secondary">
+        <section id="main" class="secondary_wide">
                  <h1><?php echo the_title(); ?></h1>
                 <?php the_content(); ?>
            
