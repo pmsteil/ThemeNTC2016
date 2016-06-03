@@ -1221,6 +1221,7 @@ function ntc_list_category_post($atts) {
 	 'post_type' => 3,
 	 'top_stripe_title' => 4,
 	 'order_by_post' =>5,
+	 'maxlimit'  => -1,
     ), $atts ) );
    global $paged;
    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
@@ -1230,11 +1231,17 @@ function ntc_list_category_post($atts) {
    $post_type=$post_type;
    $top_stripe_title=$top_stripe_title;
    $order_by_post=$order_by_post;
+   $maxlimit=$maxlimit;
+   if($maxlimit!=-1){
+   $paged1=$paged-1;
+   $remainig = $maxlimit-($paged1*$per_page);
+   }
    $args = array( 'category'=>$category,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' );
    
                     $postslist = new WP_Query( $args );
 					
                    if ( $postslist->have_posts() ) :
+				    $i=1;
 				   ?>
                  <div class="box">
                 <div class="title title_index">
@@ -1245,6 +1252,7 @@ function ntc_list_category_post($atts) {
                    <?php
         
 		   while ( $postslist->have_posts() ) : $postslist->the_post();
+		    if($maxlimit==-1){
 		      ?>
                             <div id="blogbackground">
                                <div class="post-body">
@@ -1260,7 +1268,25 @@ function ntc_list_category_post($atts) {
                                  </li>
                                 </div>
                             </div>
-<?php
+                           
+                     <?php }else{ if($i<=$remainig){  ?>
+       
+                         <div id="blogbackground">
+                               <div class="post-body">
+                                 <li class="blog-list-title" id="postnum1432883">
+                                    <span class="blog-list-title-only">
+                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                    </span>
+                                   <div id="postText1432883">
+                                    <div class="blog-thumbnail"><?php the_post_thumbnail(); ?></div>
+                                    <?php the_excerpt(); ?>
+                                    <a class="blog-read-more" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
+                                   </div>
+                                 </li>
+                                </div>
+                            </div>
+        <?php $i++; }
+                   }
                    endwhile; 
 				   ?>
                    </div>
@@ -1272,13 +1298,13 @@ function ntc_list_category_post($atts) {
                    
         echo '<div style="clear:both;"></div>';
       if (function_exists(ntc_custom_pagination)) {
-        ntc_custom_pagination($postslist->max_num_pages,$pagerange,$paged);
+        ntc_custom_pagination($postslist->max_num_pages,$pagerange,$paged,$maxlimit,$per_page);
       }
     
 		wp_reset_postdata();
 }
 add_shortcode('ntclistcategorypost', 'ntc_list_category_post');
-function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
+function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='',$maxlimit,$per_page) {
   if (empty($pagerange)) {
     $pagerange = 2;
   }
@@ -1306,6 +1332,7 @@ function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
    * We construct the pagination arguments to enter into our paginate_links
    * function. 
    */
+   if($maxlimit!=-1){ $numpages=ceil($maxlimit/$per_page);}
   $pagination_args = array(
     'base'            => get_pagenum_link(1) . '%_%',
     'format'          => '?page=%#%',
