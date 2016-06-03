@@ -1224,7 +1224,7 @@ function ntc_list_category_post($atts) {
     ), $atts ) );
    global $paged;
    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
-   $cat_name = $category;
+   $cat_name = $category; 
    $per_page=$per_page;
    $pagerange=$pagerange;
    $post_type=$post_type;
