@@ -1299,7 +1299,7 @@ function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
   }
   if ($numpages == '') {
     global $wp_query;
-    $numpages = $wp_query->$max_post;
+    $numpages = $wp_query->max_post;
     if(!$numpages) {
         $numpages = 1;
     }
