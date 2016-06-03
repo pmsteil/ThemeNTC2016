@@ -1228,7 +1228,7 @@ function ntc_list_category_post($atts) {
    $pagerange=$pagerange;
    $post_type=$post_type;
    $top_stripe_title=$top_stripe_title;
-   $args = array( 'category'=>$category,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged, 'order'=> 'ASC', 'orderby' => 'id' );
+   $args = array( 'category'=>$category,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged, 'order'=> 'DESC', 'orderby' => 'id' );
    
                     $postslist = new WP_Query( $args );
 					
