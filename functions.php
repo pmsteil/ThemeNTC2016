@@ -1221,7 +1221,6 @@ function ntc_list_category_post($atts) {
 	 'post_type' => 3,
 	 'top_stripe_title' => 4,
 	 'order_by_post' =>5,
-	 'numpages'=>6,
     ), $atts ) );
    global $paged;
    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
@@ -1231,7 +1230,6 @@ function ntc_list_category_post($atts) {
    $post_type=$post_type;
    $top_stripe_title=$top_stripe_title;
    $order_by_post=$order_by_post;
-   $numpages=$numpages;
    $args = array( 'category'=>$category,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged, 'order'=> $order_by_post, 'orderby' => 'id' );
    
                     $postslist = new WP_Query( $args );
