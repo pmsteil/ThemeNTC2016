@@ -1221,6 +1221,7 @@ function ntc_list_category_post($atts) {
 	 'post_type' => 3,
 	 'top_stripe_title' => 4,
 	 'order_by_post' =>5,
+	 'max_post'=>6,
     ), $atts ) );
    global $paged;
    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
@@ -1230,6 +1231,7 @@ function ntc_list_category_post($atts) {
    $post_type=$post_type;
    $top_stripe_title=$top_stripe_title;
    $order_by_post=$order_by_post;
+   $max_post=$max_post;
    $args = array( 'category'=>$category,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged, 'order'=> $order_by_post, 'orderby' => 'id' );
    
                     $postslist = new WP_Query( $args );
@@ -1272,7 +1274,7 @@ function ntc_list_category_post($atts) {
                    
         echo '<div style="clear:both;"></div>';
       if (function_exists(ntc_custom_pagination)) {
-        ntc_custom_pagination($postslist->max_num_pages,$pagerange,$paged);
+        ntc_custom_pagination($postslist->$max_post,$pagerange,$paged);
       }
     
 		wp_reset_postdata();
@@ -1297,7 +1299,7 @@ function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='') {
   }
   if ($numpages == '') {
     global $wp_query;
-    $numpages = $wp_query->max_num_pages;
+    $numpages = $wp_query->$max_post;
     if(!$numpages) {
         $numpages = 1;
     }
