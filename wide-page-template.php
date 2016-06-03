@@ -49,7 +49,7 @@
     color: #fff;
 }
 .secondary_wide{
-	padding:0 5px;
+	padding:25px 5px;
 }
 </style> 
 
