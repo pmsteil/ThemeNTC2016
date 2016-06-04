@@ -212,6 +212,31 @@ ul.metro-district-details-list li a{
 div#text-79 {
     display: inline-block;
 }
+@media only screen  and (max-width: 767px){
+.dropdown_ct_list li:last-child a.drop-p-bg {
+    background: none !important;
+}
+.metro-district-popup .col-left1 {
+    text-align: center;
+    padding-left: 30px !important;
+}
+.metro-district-popup .align-left {
+    float: none !important;
+}
+ul.metro-district-details-list {
+    float: none !important;
+    width: 100% !important;  
+	 text-align: left !important;
+}
+.col-left1 a {
+    padding-left: 15px !important;
+}
+.district-popup .col-center1 ul li a,.district-popup .col-right1 ul li a {
+    padding-left: 15px !important;
+	    padding-top: 0px;
+    padding-bottom: 0px;
+}
+}
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
