@@ -61,10 +61,10 @@ h1.single_post_title.single_post_title12 {
 				<div class="archive-meta"><?php echo category_description(); ?></div>
 				<?php endif; ?>
 			</header><!-- .archive-header -->
-
+				<?php do_shortcode('[ntclistcategorypost category="Around the Conference " order_by_post="DESC" per_page="10" pagerange="2" post_type="post" maxlimit="10"]'); ?>		
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<?php the_content(); get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
 			<?php //twentythirteen_paging_nav(); ?>
