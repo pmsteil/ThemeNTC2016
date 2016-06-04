@@ -65,9 +65,9 @@ h1.single_post_title.single_post_title12 {
 				 $cat_id =  get_cat_id( single_cat_title("",false) );exit;
 				 do_shortcode('[ntclistcategorypost category="'.$cat_id.'" order_by_post="DESC" per_page="10" pagerange="2" post_type="post" maxlimit="200"]'); ?>		
 			<?php /* The loop */ ?>
-			<?php /* while ( have_posts() ) : the_post(); ?>
+			<?php  while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; */ ?>
+			<?php endwhile; ?>
 
 			<?php //twentythirteen_paging_nav(); ?>
 
