@@ -236,7 +236,7 @@ ul.metro-district-details-list {
 	    padding-top: 0px;
     padding-bottom: 0px;
 }
-.metro-district-popup .show-for-large-cust-metrot {
+.metro-district-popup .show-for-large-cust-metro {
     display: none !important;
 }
 .district-popup .btn-holder a, .districts-popup .metro-btn {
