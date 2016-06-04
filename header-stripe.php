@@ -213,7 +213,7 @@ div#text-79 {
     display: inline-block;
 }
 @media only screen  and (max-width: 767px){
-.dropdown_ct_list li:last-child a.drop-p-bg {
+.dropdown_ct .dropdown_ct_list li:last-child a.drop-p-bg {
     background: none !important;
 }
 .metro-district-popup .col-left1 {
@@ -236,7 +236,25 @@ ul.metro-district-details-list {
 	    padding-top: 0px;
     padding-bottom: 0px;
 }
+.show-for-large-cust, .second .show-for-large-cust {
+    display: none !important;
 }
+.district-popup .btn-holder a, .districts-popup .metro-btn {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+}
+.district-popup .btn-holder .over {
+    position: static !important;
+}
+.district-popup .btn-holder {
+    height: auto;
+}
+.district-popup .btn-holder .frame {
+    padding: 0 30px;
+}
+}
+
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
