@@ -1245,7 +1245,7 @@ function ntc_list_category_post($atts) {
 				   ?>
                  <div class="box">
                 <div class="title title_index">
-                  <?php if($top_stripe_title){	?>
+                  <?php if(!empty($top_stripe_title)){	?>
                   <h2><?php echo $top_stripe_title; ?></h2>
                   <?php } ?>
                 </div>
