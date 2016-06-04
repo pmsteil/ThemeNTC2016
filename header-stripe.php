@@ -245,13 +245,17 @@ ul.metro-district-details-list {
     width: 100% !important;
 }
 .district-popup .btn-holder .over {
-    position: static !important;
+    position: static !important;  padding-bottom: 40px;
 }
 .district-popup .btn-holder {
     height: auto;
 }
 .district-popup .btn-holder .frame {
     padding: 0 30px;
+	position: static !important;
+}
+.metro-btn-holder a span {
+    line-height: 14px;
 }
 }
 
