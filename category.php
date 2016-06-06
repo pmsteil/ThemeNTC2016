@@ -73,8 +73,8 @@ h1.single_post_title.single_post_title12 {
                 <div class="box-holder">
                   <div class="news-row"> 
                     <!--Add blog here -->
-                     <?php
-       $args = array( 'category'=>'$cat_id','post_type' => 'post','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
+                     <?php 
+       $args = array( 'category'=>$cat_id,'category_name'=>$cat_name,'post_type' => 'post','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
                     $postslist = get_posts( $args );
                     foreach ( $postslist as $post ) :
                     setup_postdata( $post ); ?> 
