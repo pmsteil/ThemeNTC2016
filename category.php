@@ -65,6 +65,44 @@ h1.single_post_title.single_post_title12 {
 				echo $cat_id =  get_cat_id( single_cat_title("",false) );
 				echo $cat_name= get_cat_name($cat_id); 
 				 ?>
+                 <div id="District-Page">
+              <div class="box">
+                <div class="title title_index">
+                  <h2>News Around the North Texas Conference</h2>
+                </div>
+                <div class="box-holder">
+                  <div class="news-row"> 
+                    <!--Add blog here -->
+                     <?php
+       $args = array( 'category'=>'$cat_id','post_type' => 'post','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
+                    $postslist = get_posts( $args );
+                    foreach ( $postslist as $post ) :
+                    setup_postdata( $post ); ?> 
+       
+                          <div id="blogbackground">
+                               <div class="post-body">
+                                 <li class="blog-list-title" id="postnum1432883">
+                                    <span class="blog-list-title-only">
+                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                    </span>
+                                   <div id="postText1432883">
+                                    <div class="blog-thumbnail"><?php the_post_thumbnail(); ?></div>
+                                    <?php the_excerpt(); ?>
+                                    <a class="blog-read-more" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
+                                   </div>
+                                 </li>
+                                </div>
+                            </div>
+       <?php
+                    endforeach; 
+                    wp_reset_postdata();
+                    ?>    
+                    
+                 
+                  </div>
+                </div>
+              </div>
+            </div>
                  	
 			<?php /* The loop */
 			
