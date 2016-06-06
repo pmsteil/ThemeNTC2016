@@ -67,17 +67,44 @@ h1.single_post_title.single_post_title12 {
 				 ?>
                  <div id="District-Page">
               <div class="box">
-                <div class="title title_index">
-                  <h2>News Around the North Texas Conference</h2>
-                </div>
                 <div class="box-holder">
                   <div class="news-row"> 
                     <!--Add blog here -->
-                     <?php 
-       $args = array( 'category'=>$cat_id,'category_name'=>$cat_name,'post_type' => 'post','posts_per_page' => 40, 'order'=> 'DESC', 'orderby' => 'id' );
+                     <?php
+					 global $paged;
+   $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+    
+   $per_page=40;
+   $pagerange=2; 
+   $maxlimit=200;
+   if($maxlimit!=-1){
+   $paged1=$paged-1;
+   $remainig = $maxlimit-($paged1*$per_page);
+   } 
+       $args = array( 'category'=>$cat_id,'category_name'=>$cat_name,'post_type' => 'post','posts_per_page' => $per_page, 'order'=> 'DESC', 'orderby' => 'id' );
                     $postslist = get_posts( $args );
                     foreach ( $postslist as $post ) :
-                    setup_postdata( $post ); ?> 
+					$i=1;
+                    setup_postdata( $post ); 
+					if($maxlimit==-1){
+					?> 
+       
+                          <div id="blogbackground">
+                               <div class="post-body">
+                                 <li class="blog-list-title" id="postnum1432883">
+                                    <span class="blog-list-title-only">
+                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                    </span>
+                                   <div id="postText1432883">
+                                    <div class="blog-thumbnail"><?php the_post_thumbnail(); ?></div>
+                                    <?php the_excerpt(); ?>
+                                    <a class="blog-read-more" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">read&nbsp;more&nbsp;»</a>
+                                   </div>
+                                 </li>
+                                </div>
+                            </div>
+       <?php }else{ if($i<=$remainig){
+		   ?> 
        
                           <div id="blogbackground">
                                <div class="post-body">
@@ -94,7 +121,14 @@ h1.single_post_title.single_post_title12 {
                                 </div>
                             </div>
        <?php
+		     $i++; }
+		   }
                     endforeach; 
+					echo '<div style="clear:both;"></div>';
+					if (function_exists(ntc_custom_pagination)) {
+        ntc_custom_pagination($postslist->max_num_pages,$pagerange,$paged,$maxlimit,$per_page);
+      }
+    
                     wp_reset_postdata();
                     ?>    
                     
