@@ -1190,7 +1190,7 @@ function ThemeNTC2016_searchform( $form ) {
 
 
      </form>';
-
+ 
   
      return $form;
  }
