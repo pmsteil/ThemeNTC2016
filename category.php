@@ -115,11 +115,7 @@ h1.single_post_title.single_post_title12 {
 			
 			 ?>
             
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php the_content(); get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; 
-				 
-			?>
+			
 
 			<?php //twentythirteen_paging_nav(); ?>
 
