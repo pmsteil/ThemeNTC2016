@@ -62,7 +62,7 @@ h1.single_post_title.single_post_title12 {
 				<?php endif; ?>
 			</header><!-- .archive-header -->
 				<?php
-				 $cat_id =  get_cat_id( single_cat_title("",false) );
+				echo $cat_id =  get_cat_id( single_cat_title("",false) );
 				 ?>		
 			<?php /* The loop */
 			echo do_shortcode('[ntclistcategorypost id="'.$cat_id.'" order_by_post="DESC" per_page="10" pagerange="2" post_type="post" maxlimit="200"]');	
