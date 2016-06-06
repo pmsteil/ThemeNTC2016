@@ -64,7 +64,6 @@ h1.single_post_title.single_post_title12 {
 				<?php
 				echo $cat_id =  get_cat_id( single_cat_title("",false) );
 				echo $cat_name= get_cat_name($cat_id); 
-				echo '[ntclistcategorypost id="'.$cat_id.'" cat_name="'.$cat_name.'" order_by_post="DESC" per_page="10" pagerange="2" post_type="post" maxlimit="200"]';
 				 ?>
                  	
 			<?php /* The loop */
