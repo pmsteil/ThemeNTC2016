@@ -74,7 +74,7 @@ h1.single_post_title.single_post_title12 {
                   <div class="news-row"> 
                     <!--Add blog here -->
                      <?php 
-       $args = array( 'category'=>$cat_id,'category_name'=>$cat_name,'post_type' => 'post','posts_per_page' => 40, 'order'=> 'ASC', 'orderby' => 'id' );
+       $args = array( 'category'=>$cat_id,'category_name'=>$cat_name,'post_type' => 'post','posts_per_page' => 40, 'order'=> 'DESC', 'orderby' => 'id' );
                     $postslist = get_posts( $args );
                     foreach ( $postslist as $post ) :
                     setup_postdata( $post ); ?> 
@@ -107,7 +107,6 @@ h1.single_post_title.single_post_title12 {
 			<?php /* The loop */
 			
 			
-			echo do_shortcode('[ntclistcategorypost id="'.$cat_id.'" cat_name="'.$cat_name.'" order_by_post="DESC" per_page="10" pagerange="2" post_type="post" maxlimit="200"]');	
 			 ?>
             
 			<?php while ( have_posts() ) : the_post(); ?>
