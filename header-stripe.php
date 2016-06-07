@@ -294,6 +294,26 @@ div#text-79 {
     background: -ms-linear-gradient(top, #B381B3 0%, #660066 100%) !important;
     background: linear-gradient(top, #B381B3 0%, #660066 100%) !important;
 }
+.page-blue2.district-popup {
+    background: #2D70B3 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-BOM.jpg);
+    border-color: #479ACB;
+}
+.page-blue2.district-popup .btn-holder {
+    background: #2D70B3 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-BOM.jpg) repeat-x;
+}
+.page-blue2.district-popup .btn-holder a{
+    border-color: #479ACB !important;
+    background-color: #2D70B3 !important;
+    background: -moz-linear-gradient(top, #479ACB 0%, #2D70B3 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #479ACB), color-stop(100%, #2D70B3)) !important;
+    background: -webkit-linear-gradient(top, #479ACB 0%, #2D70B3 100%) !important;
+    background: -o-linear-gradient(top, #479ACB 0%, #2D70B3 100%) !important;
+    background: -ms-linear-gradient(top, #479ACB 0%, #2D70B3 100%) !important;
+    background: linear-gradient(top, #479ACB 0%, #2D70B3 100%) !important;
+}
+.page-blue2.district-popup .btn-holder a span {
+    border-color: #58B2D7 !important;
+}
 @media only screen  and (max-width: 767px){
 .dropdown_ct .dropdown_ct_list li:last-child a.drop-p-bg {
     background: none !important;
