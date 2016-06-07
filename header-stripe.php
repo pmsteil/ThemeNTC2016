@@ -314,6 +314,25 @@ div#text-79 {
 .page-blue2.district-popup .btn-holder a span {
     border-color: #58B2D7 !important;
 }
+.page-navy.district-popup {
+    background: #003366 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-district-navy.jpg);
+    border-color: #00458A;
+}
+.page-navy.district-popup .btn-holder {
+    background: #00458A;
+}
+.page-navy.district-popup .btn-holder a{
+	border-color: white !important;
+    border: white !important;
+    background: #003366 !important;
+    background-color: #003366 !important;
+    background: -moz-linear-gradient(top, #003366 0%, #002448 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #003366), color-stop(100%, #002448)) !important;
+    background: -webkit-linear-gradient(top, #003366 0%, #002448 100%) !important;
+    background: -o-linear-gradient(top, #003366 0%, #002448 100%) !important;
+    background: -ms-linear-gradient(top, #003366 0%, #002448 100%) !important;
+    background: linear-gradient(top, #003366 0%, #002448 100%) !important;
+}
 @media only screen  and (max-width: 767px){
 .dropdown_ct .dropdown_ct_list li:last-child a.drop-p-bg {
     background: none !important;
