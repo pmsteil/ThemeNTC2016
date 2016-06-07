@@ -222,6 +222,16 @@ div#text-79 {
 .page-green1.district-popup .btn-holder a span {
     border-color: #859a15 !important;
 }
+.page-green1.district-popup .btn-holder a {
+    border-color: #3c4707 !important;
+    background-color: #596b0c !important;
+    background: -moz-linear-gradient(top, #6f8014 0%, #596b0c 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6f8014), color-stop(100%, #596b0c)) !important;
+    background: -webkit-linear-gradient(top, #6f8014 0%, #596b0c 100%) !important;
+    background: -o-linear-gradient(top, #6f8014 0%, #596b0c 100%) !important;
+    background: -ms-linear-gradient(top, #6f8014 0%, #596b0c 100%) !important;
+    background: linear-gradient(top, #6f8014 0%, #596b0c 100%) !important;
+}
 @media only screen  and (max-width: 767px){
 .dropdown_ct .dropdown_ct_list li:last-child a.drop-p-bg {
     background: none !important;
