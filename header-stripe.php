@@ -212,6 +212,16 @@ ul.metro-district-details-list li a{
 div#text-79 {
     display: inline-block;
 }
+.page-green1.district-popup {
+    background: #5f3308 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-district-green.jpg) !important;
+    border-color: #3b450b !important;
+}
+.page-green1.district-popup .btn-holder {
+    background: #515f0c url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-green.png) repeat-x !important;
+}
+.page-green1.district-popup .btn-holder a span {
+    border-color: #859a15 !important;
+}
 @media only screen  and (max-width: 767px){
 .dropdown_ct .dropdown_ct_list li:last-child a.drop-p-bg {
     background: none !important;
