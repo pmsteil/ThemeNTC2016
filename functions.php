@@ -1242,7 +1242,6 @@ function ntc_list_category_post($atts) {
                    if ( $postslist->have_posts() ) :
 				    $i=1;
 				   ?>
-                   <div style="clear:both"> </div>
                  <div class="box">
                 <div class="title title_index">
                   <?php if(!empty($top_stripe_title)){	?>
