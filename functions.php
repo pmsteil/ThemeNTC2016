@@ -1224,7 +1224,7 @@ function ntc_list_category_post($atts) {
 	 'maxlimit'  => -1,
     ), $atts ) );
 	
-	echo '<pre>'; print_r($atts); echo '</pre>'; 
+	
    global $paged;
    global $content;
 	ob_start();
@@ -1233,7 +1233,7 @@ function ntc_list_category_post($atts) {
    $cat_name = $category_name; 
    $per_page=$per_page;
    $pagerange=$pagerange;
-   echo $post_type=$post_type;
+   $post_type=$post_type;
    $top_stripe_title = $top_stripe_title;
    $order_by_post=$order_by_post;
    $maxlimit=$maxlimit;
@@ -1247,7 +1247,7 @@ function ntc_list_category_post($atts) {
 	  $args = array( 'category'=>$cat_id,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' ); 
 	  }
 	
-	echo '<pre>'; print_r($args); echo '</pre>';  
+	
   
    
    
