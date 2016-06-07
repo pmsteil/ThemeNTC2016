@@ -1239,7 +1239,7 @@ function ntc_list_category_post($atts) {
    $paged1=$paged-1;
    $remainig = $maxlimit-($paged1*$per_page);
    }
-   $args = array( 'category'=>$cat_id,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' );
+   $args = array( 'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' );
    
                     $postslist = new WP_Query( $args );
 					
