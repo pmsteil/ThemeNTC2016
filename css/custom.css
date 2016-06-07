@@ -1437,13 +1437,13 @@ ul.right_menu_sec-list li.divider {
 	    margin-bottom: 6px;
 }
 .fotter-cat-2 ul li:nth-last-child(1),.fotter-cat-2 ul li:nth-last-child(2),.fotter-cat-2 ul li:nth-last-child(3),.fotter-cat-2 ul li:nth-last-child(4){
-	display:none;
+	/*display:none;*/
 }
 .fotter-cat-4 ul li:nth-last-child(3),.fotter-cat-4 ul li:nth-last-child(4){
-	display:none;
+	/*display:none;*/
 }
 .fotter-cat-3 ul li:nth-last-child(1),.fotter-cat-3 ul li:nth-last-child(2),.fotter-cat-3 ul li:nth-last-child(3),.fotter-cat-3 ul li:nth-last-child(4){
-	display:none;
+	/*display:none;*/
 }
 .churches-popup .head {
     padding: 0 0px 0 0;
