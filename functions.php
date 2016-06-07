@@ -1231,7 +1231,7 @@ function ntc_list_category_post($atts) {
    $cat_name = $category_name; 
    $per_page=$per_page;
    $pagerange=$pagerange;
-   $post_type=$post_type;
+   echo $post_type=$post_type;
    $top_stripe_title = $top_stripe_title;
    $order_by_post=$order_by_post;
    $maxlimit=$maxlimit;
@@ -1239,7 +1239,13 @@ function ntc_list_category_post($atts) {
    $paged1=$paged-1;
    $remainig = $maxlimit-($paged1*$per_page);
    }
-   $args = array( 'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' );
+   if($post_type!='3'){
+	$args = array( 'category'=>$cat_id,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' );   
+   }
+   else{
+	 $args = array( 'category'=>$cat_id,'category_name' => $cat_name,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' );  
+   }
+   
    
                     $postslist = new WP_Query( $args );
 					
