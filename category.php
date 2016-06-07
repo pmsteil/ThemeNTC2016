@@ -127,8 +127,8 @@ h1.single_post_title.single_post_title12 {
         <aside class="large-4 medium-5 columns right-sidebar-ct">
         	<div id="sidecontent" class="right-sidebar-inner-ct medium-side-top">
             <div class="sidebox">
-       			 <?php //get_sidebar( 'sidebarmain' ) ?>
-                 <?php get_sidebar(); ?>
+       			 <?php get_sidebar( 'sidebarmain' ) ?>
+                 <?php //get_sidebar(); ?>
         	</div>
         </div>
         </aside>
