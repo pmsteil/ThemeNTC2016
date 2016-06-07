@@ -1223,6 +1223,8 @@ function ntc_list_category_post($atts) {
 	 'maxlimit'  => -1,
     ), $atts ) );
    global $paged;
+   global $content;
+	ob_start();
    $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
    $cat_name = $category; 
    $per_page=$per_page;
@@ -1301,7 +1303,8 @@ function ntc_list_category_post($atts) {
       if (function_exists(ntc_custom_pagination)) {
         ntc_custom_pagination($postslist->max_num_pages,$pagerange,$paged,$maxlimit,$per_page);
       }
-    
+    $output = ob_get_clean();
+    return $output; 
 		wp_reset_postdata();
 }
 add_shortcode('ntclistcategorypost', 'ntc_list_category_post');
