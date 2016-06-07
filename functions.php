@@ -1239,16 +1239,14 @@ function ntc_list_category_post($atts) {
    $paged1=$paged-1;
    $remainig = $maxlimit-($paged1*$per_page);
    }
-   if($post_type!='3'){
+  
 	$args = array( 'category'=>$cat_id,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' );   
-   }
-   else{
-	 $args = array( 'category'=>$cat_id,'category_name' => $cat_name,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' );  
-   }
+  
    
    
                     $postslist = new WP_Query( $args );
-					
+			global $wpdb;
+			echo $wpdb->last_query;		
                    if ( $postslist->have_posts() ) :
 				    $i=1;
 				   ?>
