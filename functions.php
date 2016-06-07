@@ -1241,7 +1241,7 @@ function ntc_list_category_post($atts) {
    }
   
 	$args = array( 'category'=>$cat_id,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' ); 
-	echo '<pre>'; print_r(args); echo '</pre>';  
+	echo '<pre>'; print_r($args); echo '</pre>';  
   
    
    
