@@ -235,6 +235,26 @@ div#text-79 {
 .page-green1.district-popup .align-left {
     margin: 8px 18px 18px 0;
 }
+.page-red.district-popup .btn-holder a span {
+    border-color: #b02410 !important;
+}
+.page-red.district-popup .btn-holder a{
+    border-color: #7b190c !important;
+    background-color: #8a180a !important;
+    background: -moz-linear-gradient(top, #9e2612 0%, #8a180a 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9e2612), color-stop(100%, #8a180a)) !important;
+    background: -webkit-linear-gradient(top, #9e2612 0%, #8a180a 100%) !important;
+    background: -o-linear-gradient(top, #9e2612 0%, #8a180a 100%) !important;
+    background: -ms-linear-gradient(top, #9e2612 0%, #8a180a 100%) !important;
+    background: linear-gradient(top, #9e2612 0%, #8a180a 100%) !important;
+}
+.page-red.district-popup {
+    background: #961d0d url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-district-red.jpg) !important;
+    border-color: #601107 !important;
+}
+.page-red.district-popup .btn-holder {
+    background: #801a0d url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-red.png) repeat-x;
+}
 @media only screen  and (max-width: 767px){
 .dropdown_ct .dropdown_ct_list li:last-child a.drop-p-bg {
     background: none !important;
