@@ -378,6 +378,11 @@ ul.metro-district-details-list {
 .metro-btn-holder a span {
     line-height: 14px;
 }
+@media only screen and (max-width: 640px){
+.secondary {
+    border-radius: 0px;
+    padding: 23px 15px;
+}
 }
 
 </style>

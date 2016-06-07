@@ -136,4 +136,10 @@ jQuery(document).ready(function(){
 div#text-79 {
     display: inline-block;
 }
+@media only screen and (max-width: 640px){
+.secondary {
+    border-radius: 0px;
+    padding: 23px 15px;
+}
+}
 </style>
