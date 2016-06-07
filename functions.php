@@ -1241,8 +1241,12 @@ function ntc_list_category_post($atts) {
    $paged1=$paged-1;
    $remainig = $maxlimit-($paged1*$per_page);
    }
-  
-	$args = array( 'category'=>$cat_id,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' ); 
+  if($cat_id==0){
+	  $args = array('category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' ); 
+	  }else{
+	  $args = array( 'category'=>$cat_id,'category_name' => $cat_name,'post_type' => $post_type,'posts_per_page' =>$per_page,'paged' => $paged,'limit'=> 8, 'order'=> $order_by_post, 'orderby' => 'id' ); 
+	  }
+	
 	echo '<pre>'; print_r($args); echo '</pre>';  
   
    
