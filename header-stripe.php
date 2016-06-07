@@ -274,6 +274,26 @@ div#text-79 {
     background: -ms-linear-gradient(top, #46008C 0%, #2E005B 100%) !important;
     background: linear-gradient(top, #46008C 0%, #2E005B 100%) !important;
 }
+.page-purple2.district-popup {
+    background-color: #660066;
+    border-color: #B381B3;
+    background: #660066;
+}
+.page-purple2.district-popup .btn-holder {
+    background-color: #B381B3;
+    background: #B381B3;
+}
+.page-purple2.district-popup .btn-holder a {
+    border-color: #B381B3 !important;
+    background-color: #660066 !important;
+    background: #660066 !important;
+    background: -moz-linear-gradient(top, #B381B3 0%, #660066 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B381B3), color-stop(100%, #660066)) !important;
+    background: -webkit-linear-gradient(top, #B381B3 0%, #660066 100%) !important;
+    background: -o-linear-gradient(top, #B381B3 0%, #660066 100%) !important;
+    background: -ms-linear-gradient(top, #B381B3 0%, #660066 100%) !important;
+    background: linear-gradient(top, #B381B3 0%, #660066 100%) !important;
+}
 @media only screen  and (max-width: 767px){
 .dropdown_ct .dropdown_ct_list li:last-child a.drop-p-bg {
     background: none !important;
