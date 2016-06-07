@@ -393,8 +393,9 @@ ul.icon-nav li a img {
 /************main content section***************/
 
 .main-content-section {
-	background: url(../images/contentbg.jpg);
-	background-size: 46% 100%;
+	background: url(../images/contentbg.jpg) repeat-x;
+    /* background-size: 46% 100%; */
+    background-color: #DC8929;
 }
 .secondary {
 	padding: 23px 0 23px 30px;
