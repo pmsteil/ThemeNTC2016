@@ -232,7 +232,7 @@ div#text-79 {
     background: -ms-linear-gradient(top, #6f8014 0%, #596b0c 100%) !important;
     background: linear-gradient(top, #6f8014 0%, #596b0c 100%) !important;
 }
-.page-green1.district-popup .align-left,.page-red.district-popup .align-left,.page-darkpurple1.district-popup .align-left,.page-blue2.district-popup .align-left {
+.page-green1.district-popup .align-left,.page-red.district-popup .align-left,.page-darkpurple1.district-popup .align-left,.page-blue2.district-popup .align-left,.page-navy.district-popup .align-left {
     margin: 8px 18px 18px 0;
 }
 .page-red.district-popup .btn-holder a span {
