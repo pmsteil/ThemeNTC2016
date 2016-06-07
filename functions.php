@@ -1223,6 +1223,8 @@ function ntc_list_category_post($atts) {
 	 'order_by_post' =>5,
 	 'maxlimit'  => -1,
     ), $atts ) );
+	
+	echo '<pre>'; print_r($atts); echo '</pre>'; 
    global $paged;
    global $content;
 	ob_start();
