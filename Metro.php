@@ -6,7 +6,6 @@
 <?php get_header('stripe'); 
 
 ?>
-
 <style>
 .stripe_heder_wrapper h1 {
     color: #e2ccab;
