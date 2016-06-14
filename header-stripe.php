@@ -384,7 +384,6 @@ ul.metro-district-details-list {
     padding: 23px 15px;
 }
 }
-
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
