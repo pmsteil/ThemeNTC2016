@@ -65,7 +65,6 @@
 ?>
 <?php endwhile; endif; ?>
 
-
 <main class="main">
     <div class="main-content-section">
         <div class="row">
@@ -86,8 +85,5 @@
         </div>
     </div>
 </main> 
-
-
-
 <!--===Footer section starts===-->
 <?php get_footer('stripe'); ?>
