@@ -3,7 +3,7 @@
     Template Name: Metro 
 */
 ?>
-<?php get_header(); 
+<?php get_header('stripe'); 
 
 ?>
 
