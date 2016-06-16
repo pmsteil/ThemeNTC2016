@@ -333,6 +333,24 @@ div#text-79 {
     background: -ms-linear-gradient(top, #003366 0%, #002448 100%) !important;
     background: linear-gradient(top, #003366 0%, #002448 100%) !important;
 }
+.district-popup.ext-minister-d.metro-district-popup {
+    background: #620000;
+    border-color: #620000;
+}
+.district-popup.ext-minister-d {
+    background: #801a0d  url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-red-1.png);
+    border-color: #801a0d;
+}
+.district-popup.ext-minister-d .btn-holder a{
+	border-color: #7b190c !important;
+    background-color: #620000 !important;
+    background: -moz-linear-gradient(top, #620000 0%, #8a180a 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #620000), color-stop(100%, #8a180a)) !important;
+    background: -webkit-linear-gradient(top, #620000 0%, #8a180a 100%) !important;
+    background: -o-linear-gradient(top, #620000 0%, #8a180a 100%) !important;
+    background: -ms-linear-gradient(top, #620000 0%, #8a180a 100%) !important;
+    background: linear-gradient(top, #620000 0%, #8a180a 100%) !important;
+}
 @media only screen  and (max-width: 767px){
 .dropdown_ct .dropdown_ct_list li:last-child a.drop-p-bg {
     background: none !important;
