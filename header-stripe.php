@@ -300,7 +300,7 @@ div#text-79 {
 }
 .page-blue2.district-popup .btn-holder {
     background: #2D70B3 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-BOM.jpg) repeat-x;
-}
+} 
 .page-blue2.district-popup .btn-holder a{
     border-color: #479ACB !important;
     background-color: #2D70B3 !important;
