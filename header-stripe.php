@@ -350,6 +350,7 @@ div#text-79 {
     background: -o-linear-gradient(top, #620000 0%, #8a180a 100%) !important;
     background: -ms-linear-gradient(top, #620000 0%, #8a180a 100%) !important;
     background: linear-gradient(top, #620000 0%, #8a180a 100%) !important;
+	border:1px solid #fff !important;
 }
 @media only screen  and (max-width: 767px){
 .dropdown_ct .dropdown_ct_list li:last-child a.drop-p-bg {
