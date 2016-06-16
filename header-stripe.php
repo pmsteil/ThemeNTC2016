@@ -221,7 +221,7 @@ div#text-79 {
 }
 .page-green1.district-popup .btn-holder a span {
     border-color: #859a15 !important;
-}
+} 
 .page-green1.district-popup .btn-holder a {
     border-color: #3c4707 !important;
     background-color: #596b0c !important;
