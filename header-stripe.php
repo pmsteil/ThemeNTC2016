@@ -337,7 +337,7 @@ div#text-79 {
     background: #620000;
     border-color: #620000;
 }
-.district-popup.ext-minister-d {
+.district-popup.ext-minister-d .btn-holder{
     background: #801a0d  url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-red-1.png);
     border-color: #801a0d;
 }
