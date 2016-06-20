@@ -135,7 +135,10 @@
 <!--/NAVBAR MAIN--> 
 <!--========bottom heder end==============--> 
 
-<style>   
+<style> 
+div#text-79 {
+    display: inline-block;
+}  
     .single_post_title{
         font-size: 18px;
         font-weight: 600;
