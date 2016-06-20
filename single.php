@@ -12,8 +12,7 @@
 ?>
 <?php
 get_header(); ?>
- <link href="<?php echo get_template_directory_uri() ?>/css/print-foundation.css" rel="stylesheet" type="text/css" media="print">
-     <link href='<?php echo get_template_directory_uri() ?>/css/print-custom.css' rel='stylesheet' type='text/css' media="print">
+ 
 <style>
 @media print{
 	.top-header-wrapper,ul.right_menu_sec-list,.dropdown_ct{
