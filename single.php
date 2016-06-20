@@ -46,7 +46,6 @@ h1.single_post_title.single_post_title12 {
     margin: 0 0 18px;
 }    
 </style>
-
 <main class="main">
   <div class="main-content-section">
     <div class="row">
