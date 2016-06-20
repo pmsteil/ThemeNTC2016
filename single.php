@@ -32,10 +32,11 @@ get_header(); ?>
 .Bottom-header-wrapper li.logo_ct a,.Bottom-header-wrapper li.logo_ct{
 	display:block !important;
 	height:126px !important;
+	overflow:visible !important;
 }
 .top-bar .title-area{
 	float:none !important;
-	    height: 126px !important;
+	height: 126px !important;
 }
 
   a[href]:after {
