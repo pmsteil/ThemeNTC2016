@@ -14,7 +14,14 @@
 get_header(); ?>
  <link href="<?php echo get_template_directory_uri() ?>/css/print-foundation.css" rel="stylesheet" type="text/css" media="print">
      <link href='<?php echo get_template_directory_uri() ?>/css/print-custom.css' rel='stylesheet' type='text/css' media="print">
-<style>   
+<style>
+@media print{
+	.top-header-wrapper,ul.right_menu_sec-list,.dropdown_ct{
+		display:none !important;
+	}
+	
+}
+
     .single_post_title{
         font-size: 18px;
         font-weight: 600;
