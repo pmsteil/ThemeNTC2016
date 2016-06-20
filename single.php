@@ -15,7 +15,7 @@ get_header(); ?>
  
 <style>
 @media print{
-	.top-header-wrapper,ul.right_menu_sec-list,.dropdown_ct,.right-sidebar-ct,.sub-footer,.footer-wrapper,.noprint,li.toggle-topbar.menu-icon{
+	.top-header-wrapper,ul.right_menu_sec-list,.dropdown_ct,.right-sidebar-ct,.sub-footer,.footer-wrapper,.noprint,li.toggle-topbar.menu-icon,.Bottom-header-wrapper{
 		display:none !important;
 	}
 	.Bottom-header-wrapper {
