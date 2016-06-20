@@ -12,7 +12,8 @@
 ?>
 <?php
 get_header(); ?>
-
+ <link href="<?php echo get_template_directory_uri() ?>/css/print-foundation.css" rel="stylesheet" type="text/css" media="print">
+     <link href='<?php echo get_template_directory_uri() ?>/css/print-custom.css' rel='stylesheet' type='text/css' media="print">
 <style>   
     .single_post_title{
         font-size: 18px;
