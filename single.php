@@ -33,11 +33,14 @@ get_header(); ?>
 	display:block !important;
 	height:126px !important;
 }
-@media print {
+.top-bar .title-area{
+	float:none !important;
+}
+
   a[href]:after {
     content: none !important;
   }
-}
+
  a[href]:after {
     content: " (" attr(href) ")";
   }
