@@ -94,19 +94,19 @@ h1.single_post_title.single_post_title12 {
 		?>
         
         <div class="noprint">
-<a href="#" onclick="window.print();return false;"
-class="button" style="margin-top: 5px; margin-right:
-20px; margin-bottom: 10px; padding-left:24px; paddingright:
-24px;">Print</a>
-<a href="/subscribe" class="button" title="Subscribe to
-The North Texas Connection email news"
-style="margin-top: 5px; margin-right: 20px; marginbottom:
-10px; padding-left:15px; paddingright:
-15px;">Subscribe</a>
-<a href="/stories" class="button" title="Submit a story"
-style="margin-top: 5px; margin-bottom: 10px;">Submit
-a Story</a>
-</div>
+            <a href="#" onclick="window.print();return false;"
+            class="button" style="margin-top: 5px; margin-right:
+            20px; margin-bottom: 10px; padding-left:24px; paddingright:
+            24px;">Print</a>
+            <a href="/subscribe" class="button" title="Subscribe to
+            The North Texas Connection email news"
+            style="margin-top: 5px; margin-right: 20px; marginbottom:
+            10px; padding-left:15px; paddingright:
+            15px;">Subscribe</a>
+            <a href="/stories" class="button" title="Submit a story"
+            style="margin-top: 5px; margin-bottom: 10px;">Submit
+            a Story</a>
+		</div>
         		</article>
         <!-- right column -->
         <aside class="large-4 medium-5 columns right-sidebar-ct">
