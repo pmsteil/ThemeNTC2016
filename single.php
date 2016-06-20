@@ -12,10 +12,10 @@
 ?>
 <?php
 get_header(); ?>
-<link rel='stylesheet' id='css_foundation_css-css'  href='//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/css/foundation.css' type='text/css' media="print" />
-<link rel='stylesheet' id='css_custom_css-css'  href='//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/css/custom.css' type='text/css' media="print" />
-<link rel='stylesheet' id='style_css-css'  href='//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/style.css?ver=1461321202' type='text/css' media='all' />
-<link rel='stylesheet' id='cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css-css'  href='//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css?ver=4.5.2' type='text/css' media='all' />
+<link rel='stylesheet'  href='//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/css/foundation.css' type='text/css' media="print" />
+<link rel='stylesheet' href='//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/css/custom.css' type='text/css' media="print" />
+<link rel='stylesheet'  href='//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/style.css?ver=1461321202' type='text/css' media='all' />
+<link rel='stylesheet'   href='//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css?ver=4.5.2' type='text/css' media='all' />
 <style>   
     .single_post_title{
         font-size: 18px;
