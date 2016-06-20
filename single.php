@@ -35,6 +35,7 @@ get_header(); ?>
 }
 .top-bar .title-area{
 	float:none !important;
+	    height: 126px !important;
 }
 
   a[href]:after {
