@@ -15,11 +15,11 @@ get_header(); ?>
  
 <style>
 @media print{
-	.top-header-wrapper,ul.right_menu_sec-list,.dropdown_ct,.right-sidebar-ct,.sub-footer,.footer-wrapper,.noprint{
+	.top-header-wrapper,ul.right_menu_sec-list,.dropdown_ct,.right-sidebar-ct,.sub-footer,.footer-wrapper,.noprint,li.toggle-topbar.menu-icon{
 		display:none !important;
 	}
 	.Bottom-header-wrapper {
-    
+    background: #d2821f !important;
 	height:126px !important;
 }
 .Bottom-header-wrapper li.logo_ct a img.wp_logo{
