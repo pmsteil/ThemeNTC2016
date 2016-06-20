@@ -46,8 +46,8 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </favicon>
 
-    <link href="<?php echo get_template_directory_uri() ?>/css/foundation.css" rel="stylesheet" type="text/css" media="print">
-     <link href='<?php echo get_template_directory_uri() ?>/css/custom.css' rel='stylesheet' type='text/css' media="print">
+    <link href="<?php echo get_template_directory_uri() ?>/css/foundation.css" rel="stylesheet" type="text/css" media="all">
+     <link href='<?php echo get_template_directory_uri() ?>/css/custom.css' rel='stylesheet' type='text/css' media="all">
 <?php wp_head() ?>
 </head>
 <body <?php body_class(); ?>>
