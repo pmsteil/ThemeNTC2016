@@ -22,10 +22,13 @@ get_header(); ?>
     background: #d2821f !important;
 	height:126px !important;
 }
-.Bottom-header-wrapper li.logo_ct a img{
+.Bottom-header-wrapper li.logo_ct a img.wp_logo{
 	height:126px !important;
 	position:relative !important;
 	z-index:999999 !important;
+}
+.Bottom-header-wrapper li.logo_ct a{
+	display:block !important;
 }
  a[href]:after {
     content: " (" attr(href) ")";
