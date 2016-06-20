@@ -22,7 +22,7 @@ get_header(); ?>
     background: #d2821f !important;
 	height:126px !important;
 }
-.Bottom-header-wrapper li.logo_ct{
+.Bottom-header-wrapper li.logo_ct a img{
 	height:126px !important;
 }
  a[href]:after {
