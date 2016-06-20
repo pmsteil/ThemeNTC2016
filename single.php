@@ -12,12 +12,6 @@
 ?>
 <?php
 get_header(); ?>
-<link rel='stylesheet'  href='//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/css/foundation.css' type='text/css' media="print" />
-<link rel='stylesheet' href='//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/css/custom.css' type='text/css' media="print" />
-<link rel='stylesheet'  href='//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/style.css?ver=1461321202' type='text/css' media='all' />
-<link rel='stylesheet'   href='//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css?ver=4.5.2' type='text/css' media='all' />
-<link href="//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/css/foundation.css" rel="stylesheet" type="text/css" />
-<link href="//dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/css/custom.css"  rel="stylesheet" type="text/css" />
 
 <style>   
     .single_post_title{
