@@ -24,9 +24,9 @@ get_header(); ?>
 }
 .Bottom-header-wrapper li.logo_ct a img{
 	height:126px !important;
-	width:300px;
-	position:relative;
-	z-index:999999;
+	width:300px !important;
+	position:relative !important;
+	z-index:999999 !important;
 }
  a[href]:after {
     content: " (" attr(href) ")";
