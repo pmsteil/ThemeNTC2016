@@ -25,12 +25,18 @@ get_header(); ?>
 .Bottom-header-wrapper li.logo_ct a img.wp_logo{
 	height:126px !important;
 	min-height:126px !important;
-	position:absolute !important;
+	position:relative !important;
 	z-index:999999 !important;
+	overflow:visible !important;
 }
 .Bottom-header-wrapper li.logo_ct a,.Bottom-header-wrapper li.logo_ct{
 	display:block !important;
 	height:126px !important;
+}
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
 }
  a[href]:after {
     content: " (" attr(href) ")";
