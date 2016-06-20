@@ -19,7 +19,7 @@ get_header(); ?>
 		display:none !important;
 	}
 	.Bottom-header-wrapper {
-    background: #d2821f !important;
+    
 	height:126px !important;
 }
 .Bottom-header-wrapper li.logo_ct a img.wp_logo{
