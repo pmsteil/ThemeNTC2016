@@ -15,9 +15,16 @@ get_header(); ?>
  
 <style>
 @media print{
-	.top-header-wrapper,ul.right_menu_sec-list,.dropdown_ct{
+	.top-header-wrapper,ul.right_menu_sec-list,.dropdown_ct,.right-sidebar-ct,.sub-footer{
 		display:none !important;
 	}
+	.Bottom-header-wrapper {
+    background: url(http://dev.northtexasumc.org/wp-content/themes/ThemeNTC2016/images/top_header2.jpg);
+	height:126px;
+}
+ a[href]:after {
+    content: " (" attr(href) ")";
+  }
 	
 }
 
