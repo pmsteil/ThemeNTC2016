@@ -397,6 +397,7 @@ ul.metro-district-details-list {
 .metro-btn-holder a span {
     line-height: 14px;
 }
+}
 @media only screen and (max-width: 640px){
 .secondary {
     border-radius: 0px;
@@ -416,6 +417,7 @@ ul.metro-district-details-list {
 .breadcrumbs{
 	color:#b45f06;
 }
+
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
