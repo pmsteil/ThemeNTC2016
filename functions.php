@@ -4,17 +4,14 @@ if( ! function_exists( 'reverie_theme_support' ) ) {
     function reverie_theme_support() {
         // Add language supports.
         load_theme_textdomain('reverie', get_template_directory() . '/lang');
-
         // Add post thumbnail supports. http://codex.wordpress.org/Post_Thumbnails
         add_theme_support('post-thumbnails');
         // set_post_thumbnail_size(150, 150, false);
         add_image_size('fd-lrg', 1024, 99999);
         add_image_size('fd-med', 768, 99999);
         add_image_size('fd-sm', 320, 9999);
-
         // rss thingy
         add_theme_support('automatic-feed-links');
-
         // Add post formats support. http://codex.wordpress.org/Post_Formats
         add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
       
@@ -31,7 +28,6 @@ register_nav_menus( array('footer1' => 'bottom footer1'));
 register_nav_menus( array('footer2' => 'bottom footer2'));
 register_nav_menus( array('footer3' => 'bottom footer3'));
 register_nav_menus( array('footer4' => 'bottom footer4'));
-
         // Add custom background support
         add_theme_support( 'custom-background',
             array(
@@ -45,9 +41,7 @@ register_nav_menus( array('footer4' => 'bottom footer4'));
     }
 }
 add_action('after_setup_theme', 'reverie_theme_support'); /* end Reverie theme support */
-
 function wtg_theme_add_sidebars(){
-
 	register_sidebar(array(
   'name' => __( 'Main', 'Laity' ),
   'id' => 'sidebarmain',
@@ -93,8 +87,6 @@ register_sidebar(array(
   'before_title' => '<h2>',
   'after_title' => '</h2>')
 );
-
-
 register_sidebar(array(
   'name' => __( 'footer 1', 'Laity' ),
   'id' => 'footer1',
@@ -158,7 +150,6 @@ register_sidebar(array(
   'before_title' => '<strong>',
   'after_title' => '</strong>')
 );
-
 register_sidebar(array(
   'name' => __( 'header stripe', 'Laity' ),
   'id' => 'header-stripe',
@@ -168,7 +159,6 @@ register_sidebar(array(
   'before_title' => '<strong>',
   'after_title' => '</strong>')
 );
-
 register_sidebar(array(
   'name' => __( 'footer stripe left', 'Laity' ),
   'id' => 'footer-stripe-left',
@@ -196,241 +186,160 @@ register_sidebar(array(
   'before_title' => '<strong>',
   'after_title' => '</strong>')
 ); 
-
-
+}
 add_action( 'widgets_init', 'wtg_theme_add_sidebars' );
-
-
 function wtg_add_theme_javascript(){
 	wp_register_script( 'js_vendor_modernizr_js', get_stylesheet_directory_uri() . '/js/vendor/modernizr.js', array(), filemtime( get_stylesheet_directory(). '/js/vendor/modernizr.js' ), true);
 	wp_enqueue_script('js_vendor_modernizr_js');
-
 	wp_register_script( 'js_vendor_modernizr_js', get_stylesheet_directory_uri() . '/js/vendor/modernizr.js', array(), filemtime( get_stylesheet_directory(). '/js/vendor/modernizr.js' ), true);
 	wp_enqueue_script('js_vendor_modernizr_js');
-
   wp_enqueue_script('jquery');
-
 	wp_register_script( 'js_main_new_js', get_stylesheet_directory_uri() . '/js/main-new.js', array(), filemtime( get_stylesheet_directory(). '/js/main-new.js' ), true);
 	wp_enqueue_script('js_main_new_js');
-
 	wp_register_script( 'js_foundation_min_js', get_stylesheet_directory_uri() . '/js/foundation.min.js', array(), filemtime( get_stylesheet_directory(). '/js/foundation.min.js' ), true);
 	wp_enqueue_script('js_foundation_min_js');
-
-
 }
 add_action( 'wp_enqueue_scripts', 'wtg_add_theme_javascript' );
-
-
 function wtg_add_theme_styles(){
 	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', array(), '');
 	wp_enqueue_style('cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', array(), '');
 	wp_enqueue_style('cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css, array()', '1461321202');
 	wp_enqueue_style('style_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', array(), '');
 	wp_enqueue_style('cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', array(), '');
 	wp_enqueue_style('cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', array(), '');
 	wp_enqueue_style('cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', array(), '');
 	wp_enqueue_style('cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', array(), '');
 	wp_enqueue_style('cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_foundation_css', get_stylesheet_directory_uri().'/css/foundation.css', array(), '1461321202');
 	wp_enqueue_style('css_foundation_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'css_custom_css', get_stylesheet_directory_uri().'/css/custom.css', array(), '1461321202');
 	wp_enqueue_style('css_custom_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'style_css', get_stylesheet_directory_uri().'/style.css', array(), '1461321202');
 	wp_enqueue_style('style_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
 	wp_register_style( 'cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css', array(), '');
 	wp_enqueue_style('cdnjs_cloudflare_com_ajax_libs_foundicons_3_0_0_foundation_icons_css');
-
 	wp_register_style( 'questions_css', get_stylesheet_directory_uri() . '/css/questions.css', array(), '');
 	wp_enqueue_style('questions_css');
-
-
 }
 add_action( 'wp_enqueue_scripts', 'wtg_add_theme_styles' );
-
 //always add support for featured images
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 75, 75, true ); // W x H, hard crop 
-
-
 //allow the default WP 'text' widget to accept shortcodes
 add_filter('widget_text', 'do_shortcode');
-
 function new_excerpt_more( $more ) {
    return '...';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );   
-
 $at_options = array(
   'theme_logourl' => '',  
   'copyright_text' => '',
@@ -441,48 +350,37 @@ $at_options = array(
   'right_blog' => '',  
   'left_blog' => ''  
 ); 
-
 if ( is_admin() ) : // Load only if we are viewing an admin page
-
 function at_register_settings() {
 	// Register settings and call sanitation functions
 	register_setting( 'at_theme_options', 'at_options', 'at_validate_options' );
 }
-
 add_action( 'admin_init', 'at_register_settings' );
-
 function at_theme_options() {
 	// Add theme options page to the addmin menu
 	add_theme_page( 'Theme Options', 'Theme Options', 'edit_theme_options', 'theme_options', 'at_theme_options_page' );
 }
-
 add_action( 'admin_menu', 'at_theme_options', 'at_validate_options' );
-
-
 function at_validate_options( $input ) {
 	global $at_options;
-
 	$settings = get_option( 'at_options', $at_options );
 	
 	// We strip all tags from the text field, to avoid vulnerablilties like XSS
 	//$input['tag_line'] = wp_filter_nohtml_kses( $input['tag_line'] );
 	return $input;
 }
-
 function my_admin_scripts() {
   wp_enqueue_script('media-upload');
   wp_enqueue_script('thickbox');  
   wp_register_script('my-upload', get_template_directory_uri() . '/js/scripts/upload.js', array('jquery','media-upload','thickbox'));
   wp_enqueue_script('my-upload');
 }
-
 function my_admin_styles() {
   wp_enqueue_style('thickbox');
 }
   
 add_action('admin_print_scripts', 'my_admin_scripts');
 add_action('admin_print_styles', 'my_admin_styles');
-
 function at_theme_options_page() {
 	global $at_options;
   
@@ -601,11 +499,8 @@ function at_theme_options_page() {
 
 	<?php
 }
-
 endif;  // EndIf is_admin()
-
 add_theme_support( 'menus' );
-
 // => location name
 register_nav_menus(array(
   'custom-menu_1' => 'Main Column 1',
@@ -616,7 +511,6 @@ register_nav_menus(array(
   'custom-menu_6' => 'Main Column 6',
   'custom-menu_7' => 'Main Column 7'
 ));
-
 // programmatically set the locations of menus
 //                                   these are the menu names
 $menu_column1 = get_term_by('name', 'Menu 1', 'nav_menu');
@@ -626,7 +520,6 @@ $menu_column4 = get_term_by('name', 'Menu 4', 'nav_menu');
 $menu_column5 = get_term_by('name', 'Menu 5', 'nav_menu');
 $menu_column6 = get_term_by('name', 'Bottom Menu', 'nav_menu');
 $menu_column7 = get_term_by('name', 'Top Menu', 'nav_menu');
-
 $locations = get_theme_mod('nav_menu_locations');
 $locations['custom-menu_1'] = $menu_column1->term_id;
 $locations['custom-menu_2'] = $menu_column2->term_id;
@@ -636,7 +529,6 @@ $locations['custom-menu_5'] = $menu_column5->term_id;
 $locations['custom-menu_6'] = $menu_column6->term_id;
 $locations['custom-menu_7'] = $menu_column7->term_id;
 set_theme_mod( 'nav_menu_locations', $locations );
-
 function get_first_sub_menu_item ($menu_name) {
   global $wpdb;
   
@@ -665,9 +557,9 @@ AND pm.meta_key = '_menu_item_object_id' order by p2.menu_order LIMIT 0 , 1";
   }
   return $item_name;
 }
-
 // gets the menu title and link; allows us to skip the first menu item 
 function get_sub_menu ($menu_name, $class_name, $include_first = false) {
+
   
   global $wpdb;
   
@@ -710,38 +602,28 @@ AND pm.meta_key = '_menu_item_object_id' order by p2.menu_order";
     $wpdb->last_error . '<br>';
   }
 }
-
 remove_shortcode('sliders');
 add_shortcode( 'sliders', 'antioch_shortcode_slider' );
-
 function antioch_shortcode_slider ($atts, $content = null, $tag ){   
   
     $return_value = "";
-
     shortcode_atts( array('category' => '', 
                         ), $atts, $tag );
-
     $select = array('post_type' => 'slider', 'orderby' => 'menu_order', 'order' => 'ASC', 'post_status'=>'publish');
-
     if ($atts['category']!="") {
          $select['category_name'] = $atts['category'];
     }
-
     if ( post_type_exists( 'slider' ) ) { 
       
     $return_value .= '<div class="slider-front">' .
   '<div class="slider single-item">' . PHP_EOL;
-
        $today = new DateTime('now');
        $temp = "";
        $date_start=null; $date_end= null;
-
        $the_query = new WP_Query($select);
        while ($the_query->have_posts()) { $the_query->the_post(); 
-
         $start = get_post_meta(get_the_ID(), 'begin_showing_on_date', true );
         $end = get_post_meta(get_the_ID(), 'stop_showing_on_date', true );
-
         if (trim($start)!="") {
             $date_start = @date_create($start);
             @date_time_set($date_start , 00, 00, 00);
@@ -750,7 +632,6 @@ function antioch_shortcode_slider ($atts, $content = null, $tag ){
             $date_end = @date_create($end);
             @date_time_set($date_end , 23, 59, 59);
         } 
-
         if (  ( ($date_start==null) || ($date_start <= $today ) )  &&  
               ( ($date_end==null) || ($date_end >= $today ) )
            )
@@ -773,16 +654,12 @@ function antioch_shortcode_slider ($atts, $content = null, $tag ){
       }   
       $return_value .= '</div>' . PHP_EOL . '
         </div>';
-
       wp_reset_postdata(); 
         
     }// end of if post type exists
     return $return_value ;
-
 }
-
 remove_shortcode( 'features', 'shortcode_features' );
-
 function antioch_features($atts, $content = null, $tag ){   
      
      $return_value = "";
@@ -801,7 +678,6 @@ function antioch_features($atts, $content = null, $tag ){
      
        $return_value .= '<section class="welcome">' . PHP_EOL . '
                            <div class="row">' . PHP_EOL;                         
-
        $the_query = new WP_Query($select); 
        
        
@@ -838,14 +714,12 @@ function antioch_features($atts, $content = null, $tag ){
      
      return $return_value ;
  }
-
 add_shortcode( 'features', 'antioch_features' );
  
   remove_shortcode( 'bloglist', 'shortcode_bloglist' );
   
   function antioch_bloglist($atts, $content = null, $tag ){   
     $return_value = "";
-
     shortcode_atts( array('category' => '', 'maxposts' => '', 'showcategorydescription' => ''
                          ), $atts, $tag );              
     $category_name =""; 
@@ -855,14 +729,10 @@ add_shortcode( 'features', 'antioch_features' );
     if (isset($atts['showcategorydescription']) && ($atts['showcategorydescription']=="no")  ){
         $showdetails = false;
     }
-
     if (isset($atts['category']) && ($atts['category']!="")  ){
-
          $category_name = $atts['category'];
          $catobj = get_category_by_slug($category_name); 
-
     }
-
     if (isset($atts['maxposts']) && ($atts['maxposts']!="")  ){
         $maxposts = $atts['maxposts'];
     }  else {
@@ -881,7 +751,6 @@ add_shortcode( 'features', 'antioch_features' );
             . '<ul class="bloglist">' . PHP_EOL;
     
     while($catquery->have_posts()) : 
-
       $catquery->the_post();
     
       $image_url = $image;
@@ -890,7 +759,6 @@ add_shortcode( 'features', 'antioch_features' );
          // get the image url
          $image_url = wp_get_attachment_url($ImageID);
  
-
     $return_value .= '<div class="front-post-box clearfix">' . PHP_EOL . 
 '                        <div class="front-post-img">' . PHP_EOL . 
 '                            <img src="' . $image_url . '" alt="">' . PHP_EOL . 
@@ -917,7 +785,6 @@ add_shortcode( 'features', 'antioch_features' );
     $excerpt = get_the_excerpt();
     $charlength++;
     $output = '';
-
     if ( mb_strlen( $excerpt ) > $charlength ) {
       $subex = mb_substr( $excerpt, 0, $charlength - 5 );
       $exwords = explode( ' ', $subex );
@@ -933,12 +800,10 @@ add_shortcode( 'features', 'antioch_features' );
 	}
   return $output;
 }
-
  function the_content_max_charlength($charlength, $excerpt) {
 	//$excerpt = get_the_excerpt();
 	$charlength++;
   $output = '';
-
 	if ( mb_strlen( $excerpt ) > $charlength ) {
 		$subex = mb_substr( $excerpt, 0, $charlength - 5 );
 		$exwords = explode( ' ', $subex );
@@ -954,34 +819,25 @@ add_shortcode( 'features', 'antioch_features' );
 	}
   return $output;
 }
-
-
  remove_shortcode( 'physical_address_maplink', 'physical_address_maplink' );
-
  function antioch_physical_address_maplink( $atts, $content = null, $tag) {
   
     $value = stripcslashes(get_option(SHORTCODE_PREFIX.$tag));
-
     if(isset($atts['format'])) {
       if($atts['format'] == 'raw') {
         return $value;
       }
     }
-
     $atts = shortcode_atts( array('format' => '',
                           ), $atts, $tag );
-
     if($atts['format'] == 'raw')
       return $value;
-
     if((trim($value)!="") && ($atts['format'] != 'raw'))   return "<a href=\"{$value}\" target=\"_blank\">Map...</a>";
-
     return $value;
         
  }
  
  add_shortcode( 'physical_address_maplink', 'antioch_physical_address_maplink' );
-
 function CBThemeWelcomeCenterAd()
 { 
   ?>
@@ -990,9 +846,7 @@ function CBThemeWelcomeCenterAd()
         <div class=line2>Visit the Welcome Center!</div>
     </a>
   <?php 
-
 } 
-
 function slug_excerpt_limit( $id=null, $max=55, $string=null, $post_id ) {
     //if we have an ID use to shorten post excerpt
     if ( !is_null( $id ) )  {
@@ -1029,11 +883,9 @@ function slug_excerpt_limit( $id=null, $max=55, $string=null, $post_id ) {
         return $excerpt;
     }
 }
-
 // Add Shortcode
 //[link-button text="" link=""]
 function link_button( $atts ) {
-
 	// Attributes
 	extract( shortcode_atts(
 		array(
@@ -1044,20 +896,15 @@ function link_button( $atts ) {
   
   return '<h2 style="clear:both"><a title="' . $atts['text'] . '" href="' . $atts['link'] . '" class="button">' . $atts['text'] . '</a></h2>';
 }
-
 add_shortcode( 'link-button', 'link_button' );
-
 function churchbuzz_foundation_init()
 {
   echo '<script>jQuery(document).foundation();</script>';
 }
-
 // add user title field to user profile
 add_action( 'wp_footer', 'churchbuzz_foundation_init', 9999 );
-
 add_action( 'show_user_profile', 'my_show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'my_show_extra_profile_fields' );
-
 function my_show_extra_profile_fields( $user ) { ?>
 
 	<h3>Extra Profile Information</h3>
@@ -1075,22 +922,16 @@ function my_show_extra_profile_fields( $user ) { ?>
 
 	</table>
 <?php }
-
 add_action( 'personal_options_update', 'my_save_extra_profile_fields' );
 add_action( 'edit_user_profile_update', 'my_save_extra_profile_fields' );
-
 function my_save_extra_profile_fields( $user_id ) {
-
 	if ( !current_user_can( 'edit_user', $user_id ) )
 		return false;
-
 	/* Copy and paste this line for additional fields. Make sure to change 'twitter' to the field ID. */
 	update_usermeta( $user_id, 'user_title', $_POST['user_title'] );
 }
-
 add_filter( 'getimagesize_mimes_to_exts', 'add_ico_mime', 99999 );
 add_filter( 'upload_mimes', 'add_ico_ext', 99999 );
-
 /*Add Ico Mime Type to Allowed Extension*/
 function add_ico_mime( $mime ) {
   $mime[ 'image/vnd.microsoft.icon' ] = "ico";
@@ -1098,27 +939,21 @@ function add_ico_mime( $mime ) {
   $mime[ 'image/ico' ]                = "ico";
   return $mime;
 }
-
 /*Add Ico File Extension to Allowed Mimes*/
 function add_ico_ext( $site_mimes ) {
   if (isset($site_mimes['ico']) === false) $site_mimes['ico'] = 'image/vnd.microsoft.icon';
   return $site_mimes;
 }
-
 add_filter( 'wp_mime_type_icon', function( $icon, $mime, $post_id )
 {
     if( $src = false || 'image/x-icon' === $mime && $post_id > 0 )
         $src = wp_get_attachment_image_src( $post_id );
-
     return is_array( $src ) ? array_shift( $src ) : $icon;
 }, 10, 3 );
-
 /*
 * Creating a function to create our CPT
 */
-
 function custom_post_type() {
-
 // Set UI labels for Custom Post Type
  $labels = array(
   'name'                => _x( 'News', 'Post Type General Name', 'NorthTexasUMC 2016' ),
@@ -1168,26 +1003,17 @@ function custom_post_type() {
  
  // Registering your Custom Post Type
  register_post_type( 'news', $args );
-
 }
-
 /* Hook into the 'init' action so that the function
 * Containing our post type registration is not 
 * unnecessarily executed. 
 */
-
 add_action( 'init', 'custom_post_type', 0 ); 
 function ThemeNTC2016_searchform( $form ) {
-
-
      $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-
      <div><label class="screen-reader-text" for="s">' . __('Search for:') . '</label>
             <input type="text" value="' . get_search_query() . '" name="s" id="s" />
-
      <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
-
-
      </form>';
  
   
