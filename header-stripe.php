@@ -403,6 +403,19 @@ ul.metro-district-details-list {
     padding: 23px 15px;
 }
 }
+.breadcrumbs.breadcrumbs_custom a {
+    text-decoration: none;
+    color: #999;
+    font: 13px/1.5 'Open Sans', Arial, Helvetica, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+.breadcrumbs.breadcrumbs_custom > *{
+	color:#b45f06;
+	line-height: 18px;
+}
+.breadcrumbs{
+	color:#b45f06;
+}
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
