@@ -45,19 +45,7 @@
     width: 170px;
     background: url(http://dev.northtexasumc.org/wp-content/uploads/2016/05/btn-for-districts-blue.png) no-repeat !important;
 }
-.breadcrumbs.breadcrumbs_custom a {
-    text-decoration: none;
-    color: #999;
-    font: 13px/1.5 'Open Sans', Arial, Helvetica, Verdana, sans-serif;
-    text-transform: capitalize;
-}
-.breadcrumbs.breadcrumbs_custom > *{
-	color:#b45f06;
-	line-height: 18px;
-}
-.breadcrumbs{
-	color:#b45f06;
-}
+
 </style> 
 
  <?php if ( have_posts() ) :
