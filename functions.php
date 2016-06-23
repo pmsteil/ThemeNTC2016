@@ -205,7 +205,7 @@ add_action('init','brcrumb_cstm_layout');
 function brcrumb_cstm_layout (){?>
 	<script type="text/javascript"> jQuery('span[typeof=ListItem]:last-child').append('<span style="font-size:9px">&nbsp;&gt;&gt;</span>'); </script>
 
-<?php } ?>
+<?php }
 
 add_action( 'widgets_init', 'wtg_theme_add_sidebars' );
 
