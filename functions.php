@@ -199,12 +199,6 @@ register_sidebar(array(
 
 
 }
-
-add_action('init','brcrumb_cstm_layout');
-
-function brcrumb_cstm_layout (){
-}
-
 add_action( 'widgets_init', 'wtg_theme_add_sidebars' );
 
 
