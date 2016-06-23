@@ -53,6 +53,10 @@
 }
 .breadcrumbs.breadcrumbs_custom > *{
 	color:#b45f06;
+	line-height: 18px;
+}
+.breadcrumbs{
+	color:#b45f06;
 }
 </style> 
 
