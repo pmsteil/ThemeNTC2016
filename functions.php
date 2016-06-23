@@ -198,7 +198,6 @@ register_sidebar(array(
 ); 
 
 
-}
 add_action( 'widgets_init', 'wtg_theme_add_sidebars' );
 
 
