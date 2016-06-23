@@ -54,6 +54,12 @@ h1.single_post_title.single_post_title12 {
         <!-- left column -->
         <article class="large-8 medium-7 left-sidebar-ct columns">
         <?php if ( have_posts() ) : ?>
+        <div class="breadcrumbs breadcrumbs_custom" typeof="BreadcrumbList" vocab="">
+							<?php if(function_exists('bcn_display'))
+                            {
+                            bcn_display();
+                            }?>
+                    </div>
 			<header class="archive-header">
 				<h1 class="archive-title"><?php printf( __( '%s', 'twentythirteen' ), single_cat_title( '', false ) ); ?></h1>
 
