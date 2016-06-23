@@ -61,6 +61,12 @@
     <div class="main-content-section">
         <section id="main" class="secondary">
              <article class="large-8 medium-7 index_article left-sidebar-ct columns">
+             	 <div class="breadcrumbs breadcrumbs_custom" typeof="BreadcrumbList" vocab="">
+						 <?php if(function_exists('bcn_display'))
+                            { 
+                            bcn_display();
+                            }?>
+                    </div>
                  <h1><?php echo the_title(); ?></h1>
                 <?php the_content(); ?>
             </article>

@@ -14,6 +14,12 @@
     <div class="main-content-section">
         <div class="row">
         <section id="main" class="secondary">
+        	 <div class="breadcrumbs breadcrumbs_custom" typeof="BreadcrumbList" vocab="">
+						 <?php if(function_exists('bcn_display'))
+                            { 
+                            bcn_display();
+                            }?>
+                    </div>
        <?php the_content(); ?>
        </section>
         </div>
