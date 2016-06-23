@@ -147,6 +147,12 @@ h1 {
         <!-- left column -->
         <article class="large-8 medium-7 left-sidebar-ct columns">
           <div id="maincontent">
+           <div class="breadcrumbs breadcrumbs_custom" typeof="BreadcrumbList" vocab="">
+						 <?php if(function_exists('bcn_display'))
+                            { 
+                            bcn_display();
+                            }?>
+                    </div>
             <h1>Site Search</h1>
             	 <?php get_search_form() ?>
             
