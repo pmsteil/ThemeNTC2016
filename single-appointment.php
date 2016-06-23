@@ -55,6 +55,12 @@ h1.single_post_title.single_post_title12 {
         <article class="large-8 medium-7 left-sidebar-ct columns">
         <!--<div class="blogtitle blogtitle12">North Texas Conference News</div>
         <p class="description description12">A New Vision, A New Voice ~ The North Texas Conference</p>-->
+        <div class="breadcrumbs breadcrumbs_custom" typeof="BreadcrumbList" vocab="">
+							<?php if(function_exists('bcn_display'))
+                            {
+                            bcn_display();
+                            }?>
+                    </div>
 
 		<?php
 		// Start the loop.
