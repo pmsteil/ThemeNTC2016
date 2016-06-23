@@ -57,6 +57,12 @@
         <div class="row">
         <section id="main" class="secondary">
              <article class="large-8 medium-7 index_article left-sidebar-ct columns">
+             <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
                  <h1><?php echo the_title(); ?></h1>
                 <?php the_content(); ?>
             </article>
