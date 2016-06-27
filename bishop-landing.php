@@ -43,7 +43,7 @@
 }
 .dropdown_ct_list li:last-child a.drop-p-bg {
     width: 170px;
-    background: url(http://dev.northtexasumc.org/wp-content/uploads/2016/05/btn-for-districts-blue.png) no-repeat !important;
+    background: url(http://www.northtexasumc.org/wp-content/uploads/2016/05/btn-for-districts-blue.png) no-repeat !important;
 }
 </style> 
 

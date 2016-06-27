@@ -213,11 +213,11 @@ div#text-79 {
     display: inline-block;
 }
 .page-green1.district-popup {
-    background: #5f3308 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-district-green.jpg) !important;
+    background: #5f3308 url(http://www.northtexasumc.org/wp-content/uploads/2016/06/bg-district-green.jpg) !important;
     border-color: #3b450b !important;
 }
 .page-green1.district-popup .btn-holder {
-    background: #515f0c url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-green.png) repeat-x !important;
+    background: #515f0c url(http://www.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-green.png) repeat-x !important;
 }
 .page-green1.district-popup .btn-holder a span {
     border-color: #859a15 !important;
@@ -249,14 +249,14 @@ div#text-79 {
     background: linear-gradient(top, #9e2612 0%, #8a180a 100%) !important;
 }
 .page-red.district-popup {
-    background: #961d0d url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-district-red.jpg) !important;
+    background: #961d0d url(http://www.northtexasumc.org/wp-content/uploads/2016/06/bg-district-red.jpg) !important;
     border-color: #601107 !important;
 }
 .page-red.district-popup .btn-holder {
-    background: #801a0d url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-red.png) repeat-x;
+    background: #801a0d url(http://www.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-red.png) repeat-x;
 }
 .page-darkpurple1.district-popup {
-    background: #5f3308 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-district-darkpurple.jpg);
+    background: #5f3308 url(http://www.northtexasumc.org/wp-content/uploads/2016/06/bg-district-darkpurple.jpg);
     border-color: #6700CE;
 }
 .page-darkpurple1.district-popup .btn-holder {
@@ -295,11 +295,11 @@ div#text-79 {
     background: linear-gradient(top, #B381B3 0%, #660066 100%) !important;
 }
 .page-blue2.district-popup {
-    background: #2D70B3 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-BOM.jpg);
+    background: #2D70B3 url(http://www.northtexasumc.org/wp-content/uploads/2016/06/bg-BOM.jpg);
     border-color: #479ACB;
 }
 .page-blue2.district-popup .btn-holder {
-    background: #2D70B3 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-BOM.jpg) repeat-x;
+    background: #2D70B3 url(http://www.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-BOM.jpg) repeat-x;
 } 
 .page-blue2.district-popup .btn-holder a{
     border-color: #479ACB !important;
@@ -315,7 +315,7 @@ div#text-79 {
     border-color: #58B2D7 !important;
 }
 .page-navy.district-popup {
-    background: #003366 url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-district-navy.jpg);
+    background: #003366 url(http://www.northtexasumc.org/wp-content/uploads/2016/06/bg-district-navy.jpg);
     border-color: #00458A;
 }
 .page-navy.district-popup .btn-holder {
@@ -338,7 +338,7 @@ div#text-79 {
     border-color: #620000;
 }
 .district-popup.ext-minister-d .btn-holder{
-    background: #801a0d  url(http://dev.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-red-1.png);
+    background: #801a0d  url(http://www.northtexasumc.org/wp-content/uploads/2016/06/bg-btn-holder-red-1.png);
     border-color: #801a0d;
 }
 .district-popup.ext-minister-d .btn-holder a{
