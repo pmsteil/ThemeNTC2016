@@ -135,7 +135,7 @@ jQuery(document).ready(function(){
 	
 </script>
 <style>
-div#text-79 {
+div#text-114 {
     display: inline-block;
 }
 @media only screen and (max-width: 640px){

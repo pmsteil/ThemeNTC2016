@@ -209,7 +209,7 @@ ul.metro-district-details-list li a{
     padding-right: 30px !important;
     border: 1px solid #00949b !important;
 } 
-div#text-79 {
+div#text-114 {
     display: inline-block;
 }
 .page-green1.district-popup {
