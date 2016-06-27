@@ -52,7 +52,7 @@ h1.single_post_title.single_post_title12 {
     <div class="row">
       <section id="main" class="secondary">
         <!-- left column -->
-        <article class="large-8 medium-7 left-sidebar-ct columns">city template
+        <article class="large-8 medium-7 left-sidebar-ct columns">
         <!--<div class="blogtitle blogtitle12">North Texas Conference News</div>
         <p class="description description12">A New Vision, A New Voice ~ The North Texas Conference</p>-->
           <div class="breadcrumbs breadcrumbs_custom" typeof="BreadcrumbList" vocab="">
