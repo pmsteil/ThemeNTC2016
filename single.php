@@ -90,7 +90,7 @@ h1.single_post_title.single_post_title12 {
       <section id="main" class="secondary">
         <!-- left column -->
         <article class="large-8 medium-7 left-sidebar-ct columns">
-         <div class="breadcrumbs breadcrumbs_custom" typeof="BreadcrumbList" vocab="">
+         <div class="breadcrumbs breadcrumbs_custom" typeof="BreadcrumbList" vocab="">city
 						 <?php if(function_exists('bcn_display'))
                             { 
                             bcn_display();
