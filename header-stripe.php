@@ -417,7 +417,6 @@ ul.metro-district-details-list {
 .breadcrumbs{
 	color:#b45f06;
 }
-
 </style>
 <div class="stripe_heder_wrapper">
 	<div class="row">
