@@ -419,7 +419,7 @@ ul.icon-nav li a img {
 	font: 13px/1.5 'Open Sans', Arial, Helvetica, Verdana, sans-serif;
 	text-transform: capitalize;
 }
-.inset {
+.inset { 
 	float: right;
 	padding: 0 00px 20px 20px;
 	width: 200px;
