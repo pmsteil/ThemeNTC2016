@@ -1,4 +1,4 @@
-jQuery(function(){
+jQuery(function($){
 
 /* pmsteil: 
 	- commented this out on 4/24/2013... not sure what this was here for... 
