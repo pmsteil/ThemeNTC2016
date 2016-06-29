@@ -71,10 +71,12 @@
   </div>
 </footersection>
 <script>
-      jQuery(document).foundation();
+     jQuery(document).ready(function($) {
+$(document).foundation();
+});
     </script> 
 <script>
-	jQuery(document).foundation();
+	//jQuery(document).foundation();
 
 // below does the "Programs" info switch
 jQuery('.is-hover a').on('mouseover', function() {
