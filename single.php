@@ -112,7 +112,7 @@ h1.single_post_title.single_post_title12 {
 			get_template_part( 'content', get_post_format() );
                         echo '<h1 class="single_post_title single_post_title12">'.get_the_title().'</h1>';
 						?>
-	<div class="post-details post-details12">Date Posted: <?php echo the_time(' l, F jS, Y') ?></div>
+	<div class="post-details post-details12">Date Posted: <?php echo the_time(' l, F j, Y') ?></div>
                         <?php
                         echo "<hr>";
                         the_content();
