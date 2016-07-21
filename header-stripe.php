@@ -278,11 +278,11 @@ div#text-79{
     background-color: #660066;
     border-color: #B381B3;
     background: #660066;
-}
+} 
 .page-purple2.district-popup .btn-holder {
     background-color: #B381B3;
     background: #B381B3;
-}
+} 
 .page-purple2.district-popup .btn-holder a {
     border-color: #B381B3 !important;
     background-color: #660066 !important;
