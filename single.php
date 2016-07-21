@@ -89,7 +89,7 @@ h1.single_post_title.single_post_title12 {
     <div class="row">
       <section id="main" class="secondary">
         <!-- left column -->
-        <article class="large-8 medium-7 left-sidebar-ct columns">
+        <article class="large-8 medium-7 left-sidebar-ct columns">single.php
          <div class="breadcrumbs breadcrumbs_custom" typeof="BreadcrumbList" vocab="">
 						 <?php if(function_exists('bcn_display'))
                             { 
