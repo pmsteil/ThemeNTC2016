@@ -86,7 +86,7 @@ h1.single_post_title.single_post_title12 {
 </style>
 <main class="main">
   <div class="main-content-section">
-    <div class="row">
+    <div class="row"> 
       <section id="main" class="secondary">
         <!-- left column -->
         <article class="large-8 medium-7 left-sidebar-ct columns">
