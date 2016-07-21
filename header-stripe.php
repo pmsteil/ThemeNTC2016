@@ -84,7 +84,7 @@
       <li class="toggle-topbar menu-icon"> <a href="#"><span>Menu</span></a> </li>
     </ul>
     <section class="top-bar-section">
-    	<?php 
+    	<?php  
 	        wp_nav_menu( array(
 	            'theme_location' => 'topmenu',
 	            'container' => false,
