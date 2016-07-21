@@ -1015,7 +1015,7 @@ function ThemeNTC2016_searchform( $form ) {
             <input type="text" value="' . get_search_query() . '" name="s" id="s" />
      <input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
      </form>';
-  
+ 
   
      return $form;
  }
