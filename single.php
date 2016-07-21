@@ -49,7 +49,7 @@ get_header(); ?>
   .footer-wrapper{
   }
 	
-}
+} 
 
     .single_post_title{
         font-size: 18px;
