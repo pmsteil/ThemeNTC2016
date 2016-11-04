@@ -1199,5 +1199,6 @@ function ntc_custom_pagination($numpages = '', $pagerange = '', $paged='',$maxli
 }
 
 add_action('wp_footer', 'brdcrmb_js');
-function brdcrmb_js(){ ?>
-<script type="text/javascript">jQuery('span[typeof=ListItem]:last-child').append('<span style="font-size:9px">&nbsp;&gt;&gt;</span>');</script><?php } ?> 
+function brdcrmb_js(){ 
+echo( "<script type=\"text/javascript\">jQuery('span[typeof=ListItem]:last-child').append('<span style=\"font-size:9px\">&nbsp;&gt;&gt;</span>');</script>");
+}
